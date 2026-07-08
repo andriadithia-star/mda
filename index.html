@@ -1,0 +1,3150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDDEX &amp; TRAVIA - Multi-Hotel &amp; Tier Dynamic Costing System</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>/*! tailwindcss v4.3.1 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-red-50: oklch(97.1% 0.013 17.38);
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-orange-700: oklch(55.3% 0.195 38.402);
+    --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-amber-700: oklch(55.5% 0.163 48.998);
+    --color-amber-800: oklch(47.3% 0.137 46.201);
+    --color-amber-900: oklch(41.4% 0.112 45.904);
+    --color-yellow-50: oklch(98.7% 0.026 102.212);
+    --color-yellow-900: oklch(42.1% 0.095 57.708);
+    --color-emerald-50: oklch(97.9% 0.021 166.113);
+    --color-emerald-100: oklch(95% 0.052 163.051);
+    --color-emerald-200: oklch(90.5% 0.093 164.15);
+    --color-emerald-300: oklch(84.5% 0.143 164.978);
+    --color-emerald-500: oklch(69.6% 0.17 162.48);
+    --color-emerald-600: oklch(59.6% 0.145 163.225);
+    --color-emerald-700: oklch(50.8% 0.118 165.612);
+    --color-emerald-800: oklch(43.2% 0.095 166.913);
+    --color-emerald-900: oklch(37.8% 0.077 168.94);
+    --color-emerald-950: oklch(26.2% 0.051 172.552);
+    --color-cyan-50: oklch(98.4% 0.019 200.873);
+    --color-cyan-100: oklch(95.6% 0.045 203.388);
+    --color-cyan-200: oklch(91.7% 0.08 205.041);
+    --color-cyan-300: oklch(86.5% 0.127 207.078);
+    --color-cyan-500: oklch(71.5% 0.143 215.221);
+    --color-cyan-600: oklch(60.9% 0.126 221.723);
+    --color-cyan-700: oklch(52% 0.105 223.128);
+    --color-cyan-800: oklch(45% 0.085 224.283);
+    --color-cyan-900: oklch(39.8% 0.07 227.392);
+    --color-cyan-950: oklch(30.2% 0.056 229.695);
+    --color-sky-50: oklch(97.7% 0.013 236.62);
+    --color-blue-50: oklch(97% 0.014 254.604);
+    --color-blue-300: oklch(80.9% 0.105 251.813);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-blue-800: oklch(42.4% 0.199 265.638);
+    --color-blue-950: oklch(28.2% 0.091 267.935);
+    --color-rose-50: oklch(96.9% 0.015 12.422);
+    --color-rose-100: oklch(94.1% 0.03 12.58);
+    --color-rose-200: oklch(89.2% 0.058 10.001);
+    --color-rose-600: oklch(58.6% 0.253 17.585);
+    --color-rose-700: oklch(51.4% 0.222 16.935);
+    --color-rose-800: oklch(45.5% 0.188 13.697);
+    --color-rose-900: oklch(41% 0.159 10.272);
+    --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-slate-100: oklch(96.8% 0.007 247.896);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-300: oklch(86.9% 0.022 252.894);
+    --color-slate-500: oklch(55.4% 0.046 257.417);
+    --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-800: oklch(27.9% 0.041 260.031);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-7xl: 80rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --leading-relaxed: 1.625;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .sticky {
+    position: sticky;
+  }
+  .top-0 {
+    top: 0;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-0\.5 {
+    margin-top: calc(var(--spacing) * 0.5);
+  }
+  .mt-1 {
+    margin-top: var(--spacing);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+  .mb-0\.5 {
+    margin-bottom: calc(var(--spacing) * 0.5);
+  }
+  .mb-1 {
+    margin-bottom: var(--spacing);
+  }
+  .mb-1\.5 {
+    margin-bottom: calc(var(--spacing) * 1.5);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .ml-1 {
+    margin-left: var(--spacing);
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
+  }
+  .min-h-\[42px\] {
+    min-height: 42px;
+  }
+  .min-h-\[60px\] {
+    min-height: 60px;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-1\/2 {
+    width: calc(1 / 2 * 100%);
+  }
+  .w-1\/3 {
+    width: calc(1 / 3 * 100%);
+  }
+  .w-2\/3 {
+    width: calc(2 / 3 * 100%);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
+  .w-44 {
+    width: calc(var(--spacing) * 44);
+  }
+  .w-auto {
+    width: auto;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-7xl {
+    max-width: var(--container-7xl);
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-1 {
+    gap: var(--spacing);
+  }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .space-y-2 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-4 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-6 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .divide-y {
+    :where(& > :not(:last-child)) {
+      --tw-divide-y-reverse: 0;
+      border-bottom-style: var(--tw-border-style);
+      border-top-style: var(--tw-border-style);
+      border-top-width: calc(1px * var(--tw-divide-y-reverse));
+      border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+    }
+  }
+  .divide-slate-200 {
+    :where(& > :not(:last-child)) {
+      border-color: var(--color-slate-200);
+    }
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .rounded-t-xl {
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
+  }
+  .border-t-4 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 4px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-dashed {
+    --tw-border-style: dashed;
+    border-style: dashed;
+  }
+  .border-amber-200 {
+    border-color: var(--color-amber-200);
+  }
+  .border-amber-300 {
+    border-color: var(--color-amber-300);
+  }
+  .border-blue-300 {
+    border-color: var(--color-blue-300);
+  }
+  .border-cyan-300 {
+    border-color: var(--color-cyan-300);
+  }
+  .border-cyan-700 {
+    border-color: var(--color-cyan-700);
+  }
+  .border-cyan-800 {
+    border-color: var(--color-cyan-800);
+  }
+  .border-emerald-100 {
+    border-color: var(--color-emerald-100);
+  }
+  .border-emerald-200 {
+    border-color: var(--color-emerald-200);
+  }
+  .border-emerald-200\/60 {
+    border-color: color-mix(in srgb, oklch(90.5% 0.093 164.15) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-emerald-200) 60%, transparent);
+    }
+  }
+  .border-emerald-300 {
+    border-color: var(--color-emerald-300);
+  }
+  .border-emerald-500 {
+    border-color: var(--color-emerald-500);
+  }
+  .border-emerald-600 {
+    border-color: var(--color-emerald-600);
+  }
+  .border-rose-100 {
+    border-color: var(--color-rose-100);
+  }
+  .border-rose-200 {
+    border-color: var(--color-rose-200);
+  }
+  .border-slate-200 {
+    border-color: var(--color-slate-200);
+  }
+  .border-slate-300 {
+    border-color: var(--color-slate-300);
+  }
+  .border-slate-500 {
+    border-color: var(--color-slate-500);
+  }
+  .border-slate-600 {
+    border-color: var(--color-slate-600);
+  }
+  .border-slate-700 {
+    border-color: var(--color-slate-700);
+  }
+  .bg-amber-50 {
+    background-color: var(--color-amber-50);
+  }
+  .bg-amber-50\/60 {
+    background-color: color-mix(in srgb, oklch(98.7% 0.022 95.277) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-amber-50) 60%, transparent);
+    }
+  }
+  .bg-amber-800 {
+    background-color: var(--color-amber-800);
+  }
+  .bg-blue-50 {
+    background-color: var(--color-blue-50);
+  }
+  .bg-blue-50\/20 {
+    background-color: color-mix(in srgb, oklch(97% 0.014 254.604) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-blue-50) 20%, transparent);
+    }
+  }
+  .bg-blue-50\/40 {
+    background-color: color-mix(in srgb, oklch(97% 0.014 254.604) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-blue-50) 40%, transparent);
+    }
+  }
+  .bg-cyan-50 {
+    background-color: var(--color-cyan-50);
+  }
+  .bg-cyan-50\/40 {
+    background-color: color-mix(in srgb, oklch(98.4% 0.019 200.873) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-cyan-50) 40%, transparent);
+    }
+  }
+  .bg-cyan-600 {
+    background-color: var(--color-cyan-600);
+  }
+  .bg-cyan-800 {
+    background-color: var(--color-cyan-800);
+  }
+  .bg-emerald-50 {
+    background-color: var(--color-emerald-50);
+  }
+  .bg-emerald-50\/40 {
+    background-color: color-mix(in srgb, oklch(97.9% 0.021 166.113) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-emerald-50) 40%, transparent);
+    }
+  }
+  .bg-emerald-600 {
+    background-color: var(--color-emerald-600);
+  }
+  .bg-rose-50 {
+    background-color: var(--color-rose-50);
+  }
+  .bg-rose-50\/40 {
+    background-color: color-mix(in srgb, oklch(96.9% 0.015 12.422) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-rose-50) 40%, transparent);
+    }
+  }
+  .bg-rose-50\/50 {
+    background-color: color-mix(in srgb, oklch(96.9% 0.015 12.422) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-rose-50) 50%, transparent);
+    }
+  }
+  .bg-rose-600 {
+    background-color: var(--color-rose-600);
+  }
+  .bg-sky-50\/50 {
+    background-color: color-mix(in srgb, oklch(97.7% 0.013 236.62) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-sky-50) 50%, transparent);
+    }
+  }
+  .bg-slate-50 {
+    background-color: var(--color-slate-50);
+  }
+  .bg-slate-50\/80 {
+    background-color: color-mix(in srgb, oklch(98.4% 0.003 247.858) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-50) 80%, transparent);
+    }
+  }
+  .bg-slate-100 {
+    background-color: var(--color-slate-100);
+  }
+  .bg-slate-200 {
+    background-color: var(--color-slate-200);
+  }
+  .bg-slate-600 {
+    background-color: var(--color-slate-600);
+  }
+  .bg-slate-700 {
+    background-color: var(--color-slate-700);
+  }
+  .bg-slate-800 {
+    background-color: var(--color-slate-800);
+  }
+  .bg-slate-900\/80 {
+    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-900) 80%, transparent);
+    }
+  }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-white\/10 {
+    background-color: color-mix(in srgb, #fff 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+    }
+  }
+  .bg-yellow-50 {
+    background-color: var(--color-yellow-50);
+  }
+  .bg-gradient-to-r {
+    --tw-gradient-position: to right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .from-cyan-900 {
+    --tw-gradient-from: var(--color-cyan-900);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-cyan-950 {
+    --tw-gradient-from: var(--color-cyan-950);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .via-cyan-900 {
+    --tw-gradient-via: var(--color-cyan-900);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .to-slate-800 {
+    --tw-gradient-to: var(--color-slate-800);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .object-contain {
+    object-fit: contain;
+  }
+  .p-1 {
+    padding: var(--spacing);
+  }
+  .p-1\.5 {
+    padding: calc(var(--spacing) * 1.5);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-2\.5 {
+    padding: calc(var(--spacing) * 2.5);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .px-1\.5 {
+    padding-inline: calc(var(--spacing) * 1.5);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
+  }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
+  }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+  .pb-1 {
+    padding-bottom: var(--spacing);
+  }
+  .pb-1\.5 {
+    padding-bottom: calc(var(--spacing) * 1.5);
+  }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
+  }
+  .pb-3 {
+    padding-bottom: calc(var(--spacing) * 3);
+  }
+  .pl-1 {
+    padding-left: var(--spacing);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[8px\] {
+    font-size: 8px;
+  }
+  .text-\[9px\] {
+    font-size: 9px;
+  }
+  .text-\[10px\] {
+    font-size: 10px;
+  }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .whitespace-pre-line {
+    white-space: pre-line;
+  }
+  .text-amber-700 {
+    color: var(--color-amber-700);
+  }
+  .text-amber-800 {
+    color: var(--color-amber-800);
+  }
+  .text-amber-900 {
+    color: var(--color-amber-900);
+  }
+  .text-blue-800 {
+    color: var(--color-blue-800);
+  }
+  .text-blue-950 {
+    color: var(--color-blue-950);
+  }
+  .text-cyan-100 {
+    color: var(--color-cyan-100);
+  }
+  .text-cyan-200 {
+    color: var(--color-cyan-200);
+  }
+  .text-cyan-300 {
+    color: var(--color-cyan-300);
+  }
+  .text-cyan-800 {
+    color: var(--color-cyan-800);
+  }
+  .text-cyan-900 {
+    color: var(--color-cyan-900);
+  }
+  .text-cyan-950 {
+    color: var(--color-cyan-950);
+  }
+  .text-emerald-800 {
+    color: var(--color-emerald-800);
+  }
+  .text-emerald-900 {
+    color: var(--color-emerald-900);
+  }
+  .text-emerald-950 {
+    color: var(--color-emerald-950);
+  }
+  .text-orange-700 {
+    color: var(--color-orange-700);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
+  }
+  .text-rose-600 {
+    color: var(--color-rose-600);
+  }
+  .text-rose-800 {
+    color: var(--color-rose-800);
+  }
+  .text-rose-900 {
+    color: var(--color-rose-900);
+  }
+  .text-slate-100 {
+    color: var(--color-slate-100);
+  }
+  .text-slate-300 {
+    color: var(--color-slate-300);
+  }
+  .text-slate-500 {
+    color: var(--color-slate-500);
+  }
+  .text-slate-600 {
+    color: var(--color-slate-600);
+  }
+  .text-slate-700 {
+    color: var(--color-slate-700);
+  }
+  .text-slate-800 {
+    color: var(--color-slate-800);
+  }
+  .text-slate-900 {
+    color: var(--color-slate-900);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .text-yellow-900 {
+    color: var(--color-yellow-900);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .accent-cyan-800 {
+    accent-color: var(--color-cyan-800);
+  }
+  .accent-emerald-700 {
+    accent-color: var(--color-emerald-700);
+  }
+  .opacity-60 {
+    opacity: 60%;
+  }
+  .opacity-90 {
+    opacity: 90%;
+  }
+  .shadow {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-md {
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xs {
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .last\:mb-0 {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .last\:border-none {
+    &:last-child {
+      --tw-border-style: none;
+      border-style: none;
+    }
+  }
+  .last\:pb-0 {
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  .hover\:bg-cyan-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-cyan-700);
+      }
+    }
+  }
+  .hover\:bg-cyan-900 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-cyan-900);
+      }
+    }
+  }
+  .hover\:bg-emerald-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-700);
+      }
+    }
+  }
+  .hover\:bg-red-50 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-50);
+      }
+    }
+  }
+  .hover\:bg-rose-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-rose-100);
+      }
+    }
+  }
+  .hover\:bg-rose-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-rose-700);
+      }
+    }
+  }
+  .hover\:bg-slate-50 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-slate-50);
+      }
+    }
+  }
+  .hover\:bg-slate-200 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-slate-200);
+      }
+    }
+  }
+  .focus\:bg-white {
+    &:focus {
+      background-color: var(--color-white);
+    }
+  }
+  .focus\:ring-1 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-2 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-amber-500 {
+    &:focus {
+      --tw-ring-color: var(--color-amber-500);
+    }
+  }
+  .focus\:ring-blue-500 {
+    &:focus {
+      --tw-ring-color: var(--color-blue-500);
+    }
+  }
+  .focus\:ring-cyan-500 {
+    &:focus {
+      --tw-ring-color: var(--color-cyan-500);
+    }
+  }
+  .focus\:ring-emerald-500 {
+    &:focus {
+      --tw-ring-color: var(--color-emerald-500);
+    }
+  }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+  }
+  .active\:scale-95 {
+    &:active {
+      --tw-scale-x: 95%;
+      --tw-scale-y: 95%;
+      --tw-scale-z: 95%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .sm\:block {
+    @media (width >= 40rem) {
+      display: block;
+    }
+  }
+  .sm\:w-auto {
+    @media (width >= 40rem) {
+      width: auto;
+    }
+  }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
+  .sm\:items-center {
+    @media (width >= 40rem) {
+      align-items: center;
+    }
+  }
+  .md\:col-span-2 {
+    @media (width >= 48rem) {
+      grid-column: span 2 / span 2;
+    }
+  }
+  .md\:col-span-4 {
+    @media (width >= 48rem) {
+      grid-column: span 4 / span 4;
+    }
+  }
+  .md\:block {
+    @media (width >= 48rem) {
+      display: block;
+    }
+  }
+  .md\:w-80 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 80);
+    }
+  }
+  .md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-3 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-4 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:p-8 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 8);
+    }
+  }
+  .xl\:w-auto {
+    @media (width >= 80rem) {
+      width: auto;
+    }
+  }
+  .xl\:flex-row {
+    @media (width >= 80rem) {
+      flex-direction: row;
+    }
+  }
+  .print\:block {
+    @media print {
+      display: block;
+    }
+  }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-divide-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-space-y-reverse: 0;
+      --tw-divide-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-duration: initial;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
+    }
+  }
+}
+</style>
+   <style>
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            body { background: white; color: black; padding: 0; }
+            .no-print { display: none !important; }
+            .print-card { border: none; box-shadow: none; padding: 0; max-width: 100%; }
+            
+            /* Mengubah grid umum menjadi block agar tidak rusak saat print halaman panjang */
+            .grid { display: block !important; }
+            .print-full { width: 100% !important; }
+
+            /* PERBAIKAN: Memaksa Layout Section Details Tetap Kesamping Saat Print */
+            body[data-print-mode="confirmation"] .section-confirmation .grid.grid-cols-1.md\:grid-cols-3 {
+                display: flex !important;
+                flex-direction: row !important;
+                gap: 12px !important;
+                width: 100% !important;
+            }
+            /* Mengatur lebar kolom agar presisi kesamping */
+            body[data-print-mode="confirmation"] .section-confirmation .grid.grid-cols-1.md\:grid-cols-3 > .md\:col-span-2 {
+                width: 65% !important;
+                display: block !important;
+            }
+            body[data-print-mode="confirmation"] .section-confirmation .grid.grid-cols-1.md\:grid-cols-3 > div:not(.md\:col-span-2) {
+                width: 35% !important;
+                display: block !important;
+            }
+            /* Pastikan sub-grid input di dalamnya ikut sejajar kesamping */
+            body[data-print-mode="confirmation"] .section-confirmation .grid.grid-cols-1.sm\:grid-cols-2 {
+                display: flex !important;
+                flex-direction: row !important;
+                gap: 8px !important;
+            }
+            body[data-print-mode="confirmation"] .section-confirmation .grid.grid-cols-1.sm\:grid-cols-2 > div {
+                flex: 1 !important;
+            }
+            
+            /* FORCE SHOW KONTEN SAAT PRINT QUOTATION */
+            body[data-print-mode="quotation"] .section-quotation { display: block !important; width: 100% !important; }
+            body[data-print-mode="quotation"] #section_penawaran { display: block !important; }
+            body[data-print-mode="quotation"] .section-confirmation { display: none !important; }
+            body[data-print-mode="quotation"] .lg\:col-span-5 { display: none !important; } 
+            body[data-print-mode="quotation"] .lg\:col-span-7 { width: 100% !important; }
+
+            /* FORCE SHOW KONTEN SAAT PRINT CONFIRMATION */
+            body[data-print-mode="confirmation"] .section-quotation { display: none !important; }
+            body[data-print-mode="confirmation"] .section-confirmation { display: block !important; width: 100% !important; }
+            body[data-print-mode="confirmation"] #section_confirmation_form { display: block !important; }
+            
+            body[data-print-mode="confirmation"] tr.hotel-row:not(.hotel-selected) {
+                display: none !important;
+            }
+        }
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif !important; background-color: #f4f6f9 !important; color: #1e293b !important; -webkit-font-smoothing: antialiased; }
+.print-card, .bg-white { border-radius: 16px !important; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04), 0 8px 10px -6px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.03) !important; border: 1px solid rgba(226, 232, 240, 0.8) !important; overflow: hidden; }
+#main_card_wrapper { overflow: visible !important; }
+.sticky { position: sticky; } .top-0 { top: 0px; } .z-50 { z-index: 50; }
+.bg-gradient-to-r { background-image: #103653 !important; padding: 24px 32px !important; }
+.bg-slate-50 { background-color: #f8fafc !important; border-radius: 12px !important; border: 1px solid #e2e8f0 !important; padding: 20px !important; }
+input[type="text"], input[type="number"], input[type="date"], select, textarea { font-family: 'Plus Jakarta Sans', sans-serif !important; border: 1px solid #cbd5e1 !important; border-radius: 8px !important; padding: 10px 14px !important; font-size: 13px !important; font-weight: 500 !important; color: #5e8da0 !important; background-color: #ffffff !important; box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.02) !important; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, select:focus, textarea:focus { border-color: #0891b2 !important; outline: none !important; box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.12), inset 0 1px 2px rgba(15, 23, 42, 0.02) !important; background-color: #ffffff !important; }
+.bg-emerald-50\/40 { background-color: #f0fdf4 !important; border-color: #bbf7d0 !important; } .bg-emerald-50\/40:focus { background-color: #ffffff !important; border-color: #10b981 !important; }
+table { border-collapse: separate !important; border-spacing: 0 !important; border-radius: 12px !important; overflow: hidden !important; border: 1px solid #e2e8f0 !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02) !important; }
+th, table thead tr th { background-color: #5e8da0 !important; color: #ffffff !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.06em !important; font-size: 11px !important; padding: 14px 16px !important; border-bottom: 2px solid #1e293b !important; border-right: 1px solid #334155 !important; }
+th:last-child { border-right: none !important; }
+td, table tbody tr td { padding: 12px 16px !important; font-size: 13px !important; border-bottom: 1px solid #e2e8f0 !important; border-right: 1px solid #e2e8f0 !important; transition: background-color 0.15s ease !important; }
+td:last-child { border-right: none !important; }
+tbody tr:hover { background-color: #f8fafc !important; }
+.bg-cyan-50\/40 { background-color: rgba(6, 182, 212, 0.06) !important; color: #083344 !important; }
+.bg-amber-50\/30 { background-color: rgba(248, 233, 93, 0.06) !important; color: #202020 !important; }
+button { font-family: 'Plus Jakarta Sans', sans-serif !important; border-radius: 8px !important; font-weight: 600 !important; letter-spacing: 0.02em !important; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+button:not([disabled]):hover { transform: translateY(-1.5px) !important; box-shadow: 0 6px 15px rgba(15, 23, 42, 0.12) !important; filter: brightness(1.05); }
+button:not([disabled]):active { transform: translateY(0px) !important; box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08) !important; }
+h3, .font-bold.text-cyan-950 { font-size: 14px !important; letter-spacing: 0.03em !important; text-transform: uppercase !important; color: #5e8da0 !important; border-bottom: 2px solid #e2e8f0 !important; padding-bottom: 10px !important; margin-bottom: 16px !important; }
+input[type="radio"] { accent-color: #0891b2 !important; width: 15px; height: 15px; cursor: pointer; }
+::-webkit-scrollbar { width: 6px; height: 6px; } ::-webkit-scrollbar-track { background: #f1f5f9; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+@media print { body { background-color: #ffffff !important; font-size: 11px !important; } .print-card, .bg-white { box-shadow: none !important; border: none !important; border-radius: 0 !important; } th { background-color: #1e293b !important; color: #ffffff !important; } }
+</style>
+</head>
+<body class="bg-slate-100 min-h-screen p-4 md:p-8 text-slate-800 antialiased" data-print-mode="confirmation" onload="renderAllDays(); kalkulasiPaket(); syncItineraryPreview(); shadowLogoInit();">
+<div id="main_card_wrapper" class="max-w-7xl mx-auto bg-white rounded-xl shadow-xl print-card">
+    
+    <div class="bg-gradient-to-r from-cyan-950 via-cyan-900 to-slate-800 p-6 text-white flex flex-col md:flex-row justify-between items-center gap-4 border-b border-cyan-800 rounded-t-xl overflow-hidden">
+        <div class="w-full flex items-center justify-between gap-4">
+            <div class="w-full md:w-auto">
+                <label class="block text-xs font-bold uppercase tracking-wider text-cyan-300 mb-1 no-print">🏢 Select Issuing Company / Letterhead:</label>
+                <select id="company_selector" onchange="switchCompanyHeader()" class="bg-slate-900/80 border border-cyan-700 rounded p-2 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 w-full md:w-80 cursor-pointer no-print" value="middex">
+                    <option value="middex">Middex Tourism (Indonesia)</option>
+                    <option value="travia">Travia Tour And Travel FZC (UAE)</option>
+                </select>
+                
+                <div id="print_company_header" class="mt-2 text-left hidden print:block md:block flex items-center gap-4">
+        <div class="flex items-center justify-between gap-4 w-full">
+            <div>
+                <h1 class="text-2xl font-black tracking-wide">Middex Tourism</h1>
+                <p class="text-xs font-semibold text-cyan-200 opacity-90">PT Middex Dutaloka Adikarsa | Jalan Raya Muchtar No 18, Sawangan Depok</p>
+                <p class="text-[11px] text-slate-300 font-mono mt-0.5">Sharjah Research Technology and Innovation Park, Office - B51-195, UAE</p>
+            </div>
+            <div class="flex-shrink-0">
+                <img id="header_logo_img" src="https://github.com/andriadithia-star/mda/blob/main/MASTER%20LOGO%20PNG2%20MIDDEX%20Biru%20merah.png?raw=true" alt="Logo" class="h-14 w-auto object-contain bg-white/10 p-1 rounded">
+            </div>
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-2 no-print ml-auto">
+            <button onclick="saveCurrentFile()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-bold shadow-md text-sm transition-all transform active:scale-95 cursor-pointer flex items-center gap-1.5">
+                💾 Save
+            </button>
+            <button onclick="printQuotation()" class="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-lg font-bold shadow-md text-sm transition-all transform active:scale-95 cursor-pointer flex items-center gap-1.5">
+                🖨️ Print / Save PDF Preview Penawaran
+            </button>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-slate-800 p-4 text-white flex flex-wrap justify-center gap-4 no-print border-b border-slate-700">
+        <button onclick="openTab('section_kalkulator')" id="btn-section_kalkulator" class="tab-btn px-6 py-2 font-semibold rounded transition-colors duration-300 bg-cyan-600">Kalkulator</button>
+        <button onclick="openTab('section_penawaran')" id="btn-section_penawaran" class="tab-btn px-6 py-2 font-semibold rounded hover:bg-cyan-700 transition-colors duration-300 bg-slate-600">Penawaran Harga &amp; Itinerary</button>
+        <button onclick="openTab('section_confirmation_form')" id="btn-section_confirmation_form" class="tab-btn px-6 py-2 font-semibold rounded hover:bg-cyan-700 transition-colors duration-300 bg-slate-600">Confirmed Itinerary</button>
+    </nav>
+
+    <div class="p-6 section-quotation">
+        <div id="section_kalkulator" class="tab-content space-y-6 no-print w-full">
+            
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-cyan-950 border-b pb-2 mb-3 flex items-center gap-2">⚙️ 1. Configuration &amp; Exchange Rate</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="col-span-2">
+                        <label class="block text-xs font-bold uppercase text-cyan-950 mb-1">👤Client Name</label>
+                        <input type="text" id="client_name" value="" oninput="syncClientName()" class="w-full p-2 border border-slate-300 rounded bg-white font-semibold focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">⏳Duration (Days)</label>
+                        <input type="number" id="durasi_hari" value="" min="1" oninput="inisialisasiItinerary(); kalkulasiPaket();" class="w-full p-2 border rounded bg-white font-medium focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-cyan-800 font-bold mb-1">Exchange Rate (1 USD = ? AED)</label>
+                        <input type="number" id="exchange_rate" value="3.635" step="0.0001" oninput="kalkulasiPaket()" class="w-full p-2 border border-cyan-300 rounded bg-cyan-50 font-bold text-cyan-900 focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">👥Base Paying Pax</label>
+                        <input type="number" id="num_pax" value="" min="1" oninput="kalkulasiPaket()" class="w-full p-2 border rounded bg-white font-medium focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Number of FOC</label>
+                        <input type="number" id="num_foc" value="" min="0" oninput="kalkulasiPaket()" class="w-full p-2 border rounded bg-white font-medium focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-xs font-semibold uppercase text-emerald-800 font-bold mb-1">Start Tour Date</label>
+                        <input type="date" id="start_date" onchange="kalkulasiPaket(); syncItineraryPreview();" class="w-full p-2 border border-emerald-300 rounded bg-emerald-50 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="form_hotel_rates_container" class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-cyan-950 border-b pb-2 mb-1 flex items-center gap-2">🏨 2. Dubai Hotels Room Rates (AED / Night)</h3>
+                <p class="text-xs text-slate-500 mb-3">*Rates for Twin/Double sharing basis.</p>
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-700 mb-1">🏨Hotel Opsi A - Name &amp; Rate</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="hotel_a_name" value="" oninput="kalkulasiPaket(); syncHotelNamesToConfirm();" class="w-2/3 p-2 border rounded bg-white text-xs font-semibold focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                            <input type="number" id="hotel_a_rate" value="0" oninput="kalkulasiPaket()" class="w-1/3 p-2 border rounded bg-white text-xs font-bold text-center text-cyan-900 focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-700 mb-1">🏨Hotel Opsi B - Name &amp; Rate</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="hotel_b_name" value="" oninput="kalkulasiPaket(); syncHotelNamesToConfirm();" class="w-2/3 p-2 border rounded bg-white text-xs font-semibold focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                            <input type="number" id="hotel_b_rate" value="0" oninput="kalkulasiPaket()" class="w-1/3 p-2 border rounded bg-white text-xs font-bold text-center text-cyan-900 focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-700 mb-1">🏨Hotel Opsi C - Name &amp; Rate</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="hotel_c_name" value="" oninput="kalkulasiPaket(); syncHotelNamesToConfirm();" class="w-2/3 p-2 border rounded bg-white text-xs font-semibold focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                            <input type="number" id="hotel_c_rate" value="0" oninput="kalkulasiPaket()" class="w-1/3 p-2 border rounded bg-white text-xs font-bold text-center text-cyan-900 focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-cyan-950 border-b pb-2 mb-1 flex items-center gap-2">📋 3. Daily Operational Rates &amp; Itinerary (AED)</h3>
+                <p class="text-xs text-slate-500 mb-4">*Set transport, guide, meals, and tickets per day.</p>
+                <div id="itinerary_input_container" class="space-y-4"><div class="bg-white p-4 rounded-lg border border-slate-300 shadow-xs space-y-3">
+            <div class="flex justify-between items-center border-b pb-1.5">
+                <span class="text-xs font-bold text-cyan-950 uppercase tracking-wide">🗓️ Day 1 Rates &amp; Plan</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 bg-slate-50 p-3 rounded border border-slate-200 text-[10px]">
+                <div class="flex gap-2">
+                    <div class="flex-1">
+                        <label class="block text-[9px] text-slate-500 font-bold uppercase mb-0.5">🚌 Coach (AED)</label>
+                        <input type="number" value="0" oninput="saveDailyCost(1, 'transport', this.value)" class="w-full p-1.5 border bg-white rounded font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-[9px] text-slate-500 font-bold uppercase mb-0.5">🤠 Guide (AED)</label>
+                        <input type="number" value="0" oninput="saveDailyCost(1, 'guide', this.value)" class="w-full p-1.5 border bg-white rounded font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                    </div>
+                </div>
+                <div class="border border-slate-200 bg-white p-2 rounded">
+                    <label class="block text-[9px] text-slate-500 font-bold uppercase mb-1">🎟️ Tickets</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <input type="text" placeholder="Ticket 1 Name" value="" oninput="saveDailyText(1, 'ticket1_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="0" oninput="saveDailyCost(1, 'ticket1', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Ticket 2 Name" value="" oninput="saveDailyText(1, 'ticket2_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="0" oninput="saveDailyCost(1, 'ticket2', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-2 border border-slate-200 bg-white p-2 rounded">
+                    <label class="block text-[9px] text-slate-500 font-bold uppercase mb-1">🍽️ Meals &amp; Restaurant</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div>
+                            <input type="text" placeholder="Meal 1 / Resto" value="" oninput="saveDailyText(1, 'meal1_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="0" oninput="saveDailyCost(1, 'meal1', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Meal 2 / Resto" value="" oninput="saveDailyText(1, 'meal2_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="0" oninput="saveDailyCost(1, 'meal2', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Meal 3 / Resto" value="" oninput="saveDailyText(1, 'meal3_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="0" oninput="saveDailyCost(1, 'meal3', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="day_rows_1" class="space-y-3 mt-2"><div class="flex flex-col gap-1.5 border-b border-slate-200 pb-3 mb-1 last:border-none last:pb-0 last:mb-0">
+            <div class="flex gap-1.5 items-center">
+                <input type="text" value="" placeholder="Time" oninput="saveDataToArray(1, 0)" class="w-16 p-1 border rounded text-[11px] text-center font-medium bg-slate-50 focus:bg-white outline-none">
+                <input type="text" value="EK 359 ARR" placeholder="Flight" oninput="saveDataToArray(1, 0)" class="w-20 p-1 border rounded text-[11px] text-center uppercase font-bold bg-rose-50/50 focus:bg-white outline-none text-rose-900">
+                <select onchange="saveDataToArray(1, 0)" class="w-1/2 p-1 border rounded text-[11px] outline-none bg-white font-medium">
+                    
+            <option value="">-- Pilih Template... --</option>
+            <optgroup label="A. Arrival / Departure / Transfer">
+                <option value="Arrival at Dubai International airport and process Immigration">A1. Arrival at Dubai International airport and process Immigration</option>
+                <option value="Arrival at Zayed International airport Abu Dhabi and Process Immigration">A2. Arrival at Zayed International airport Abu Dhabi and Process Immigration</option>
+                <option value="Transfer out to Dubai International airport">A3. Transfer out to Dubai International airport</option>
+                <option value="Transfer out to Zayed International airport Abu Dhabi">A4. Transfer out to Zayed International airport Abu Dhabi</option>
+                <option value="Transfer to Dubai">A5. Transfer to Dubai</option>
+                <option value="Transfer to Abu Dhabi">A6. Transfer to Abu Dhabi</option>
+                <option value="Flight departure to ...">A7. Flight departure to ...</option>
+		<option value="Arrival at Hamad Airport Doha">F. Arrival at Hamad Airport Doha</option>
+                <option value="Transfer out to Hamad Airport Doha">G. Transfer out to Hamad Airport Doha</option>
+            </optgroup>
+            <optgroup label="B. Meet and Greet">
+                <option value="Meet and Greet with tour guide">B. Meet and Greet with tour guide</option>
+		<option value="check in hotel and overnight">A. check in hotel and overnight</option>
+                <option value="Check out Hotel">B. Check out Hotel</option>
+                <option value="Back to Hotel">C. Back to Hotel</option>
+		<option value="Free at Hotel">H. Free at Hotel</option>
+            </optgroup>
+            <optgroup label="C. Dubai Tour">
+                <option value="Modern Dubai Tour Photo stop (Museum of the Future, Photo stop Burj Khalifa, Photo stop at Jumeirah beach, Photo stop Dubai Marina)">C1. Modern Dubai Tour Photo stop (Museum of the Future, Burj Khalifa, Jumeirah Beach, Dubai Marina)</option>
+                <option value="Old Dubai tour (Photo stop at Al Seef district, Abra taxi, Visit Gold and Spice souk)">C2. Old Dubai tour (Al Seef district, Abra taxi, Gold &amp; Spice Souk)</option>
+                <option value="Visit Dubai Mall, Shopping and see Dubai Fountain show (After 6 PM)">C3. Visit Dubai Mall, Shopping and see Dubai Fountain show (After 6 PM)</option>
+            </optgroup>
+            <optgroup label="D. Abu Dhabi Tour">
+                <option value="Visit Sheikh Zayed Grand Mosque">D1. Visit Sheikh Zayed Grand Mosque</option>
+                <option value="Photo stop at Emirates Palace, Sheikh Palace, Abu Dhabi Corniche, Ferrari World">D2. Photo stop at Emirates Palace, Sheikh Palace, Corniche, Ferrari World</option>
+            </optgroup>
+            <optgroup label="E. Desert Safari">
+                <option value="Afternoon Desert Safari, Dune Bashing, Free entertainment at Camp, BBQ Dinner buffet">E. Afternoon Desert Safari, Dune Bashing, Free entertainment at Camp, BBQ Dinner buffet</option>
+            </optgroup>
+            <optgroup label="F. Ticket Excursion">
+                <option value="Visit Miracle Garden (Inc Ticket)">F1. Visit Miracle Garden (Inc Ticket)</option>
+                <option value="To Top Burj Khalifa 124th floor non-prime time (Inc Ticket)">F2. To Top Burj Khalifa 124th floor non-prime time (Inc Ticket)</option>
+                <option value="Dhow Cruise Dinner Marina">F3. Dhow Cruise Dinner Marina</option>
+                <option value="Entry Ferrari World (Inc Ticket)">F4. Entry Ferrari World (Inc Ticket)</option>
+            </optgroup>
+            <optgroup label="G. Meals">
+                <option value="Breakfast at Restaurant">G1. Breakfast at Restaurant</option>
+                <option value="Lunch at Restaurant">G2. Lunch at Restaurant</option>
+                <option value="Dinner at Restaurant">G3. Dinner at Restaurant</option>
+                <option value="Breakfast Box">G4. Breakfast Box</option>
+                <option value="Lunch Box">G5. Lunch Box</option>
+                <option value="Dinner Box">G6. Dinner Box</option>
+                <option value="Snack Box">G7. Snack Box</option>
+		<option value="Breakfast at Hotel">D. Breakfast at Hotel</option>
+            </optgroup>
+        
+                </select>
+                <div class="flex gap-1 ml-auto">
+                    <button type="button" onclick="geserBarisAtas(1, 0)" class="text-slate-500 hover:bg-slate-200 px-1.5 py-0.5 rounded text-xs font-bold" title="Move Up" disabled="" style="opacity: 0.3; cursor: not-allowed;">↑</button>
+                    <button type="button" onclick="geserBarisBawah(1, 0)" class="text-slate-500 hover:bg-slate-200 px-1.5 py-0.5 rounded text-xs font-bold" title="Move Down">↓</button>
+                    <button type="button" onclick="hapusBarisAktivitas(1, 0)" class="text-red-500 hover:bg-red-50 px-1.5 py-0.5 rounded text-xs font-bold" title="Delete">✕</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-1">
+                <input type="text" value="Arrival at Dubai International airport and process Immigration" placeholder="✍️ ATAU ketik manual aktivitas di sini (Dropdown akan diabaikan)..." oninput="saveDataToArray(1, 0)" class="w-full p-1 border rounded text-[10px] bg-emerald-50/40 focus:bg-white text-emerald-900 font-medium outline-none">
+                <input type="text" value="" placeholder="📌 Catatan tambahan / detail memo..." oninput="saveDataToArray(1, 0)" class="w-full p-1 border rounded text-[10px] bg-sky-50/50 focus:bg-white text-slate-600 font-medium outline-none">
+            </div>
+        </div><div class="flex flex-col gap-1.5 border-b border-slate-200 pb-3 mb-1 last:border-none last:pb-0 last:mb-0">
+            <div class="flex gap-1.5 items-center">
+                <input type="text" value="" placeholder="Time" oninput="saveDataToArray(1, 1)" class="w-16 p-1 border rounded text-[11px] text-center font-medium bg-slate-50 focus:bg-white outline-none">
+                <input type="text" value="BUS" placeholder="Flight" oninput="saveDataToArray(1, 1)" class="w-20 p-1 border rounded text-[11px] text-center uppercase font-bold bg-rose-50/50 focus:bg-white outline-none text-rose-900">
+                <select onchange="saveDataToArray(1, 1)" class="w-1/2 p-1 border rounded text-[11px] outline-none bg-white font-medium">
+                    
+            <option value="">-- Pilih Template... --</option>
+            <optgroup label="A. Arrival / Departure / Transfer">
+                <option value="Arrival at Dubai International airport and process Immigration">A1. Arrival at Dubai International airport and process Immigration</option>
+                <option value="Arrival at Zayed International airport Abu Dhabi and Process Immigration">A2. Arrival at Zayed International airport Abu Dhabi and Process Immigration</option>
+                <option value="Transfer out to Dubai International airport">A3. Transfer out to Dubai International airport</option>
+                <option value="Transfer out to Zayed International airport Abu Dhabi">A4. Transfer out to Zayed International airport Abu Dhabi</option>
+                <option value="Transfer to Dubai">A5. Transfer to Dubai</option>
+                <option value="Transfer to Abu Dhabi">A6. Transfer to Abu Dhabi</option>
+                <option value="Flight departure to ...">A7. Flight departure to ...</option>
+            </optgroup>
+            <optgroup label="B. Meet and Greet">
+                <option value="Meet and Greet with tour guide">B. Meet and Greet with tour guide</option>
+            </optgroup>
+            <optgroup label="C. Dubai Tour">
+                <option value="Modern Dubai Tour Photo stop (Museum of the Future, Photo stop Burj Khalifa, Photo stop at Jumeirah beach, Photo stop Dubai Marina)">C1. Modern Dubai Tour Photo stop (Museum of the Future, Burj Khalifa, Jumeirah Beach, Dubai Marina)</option>
+                <option value="Old Dubai tour (Photo stop at Al Seef district, Abra taxi, Visit Gold and Spice souk)">C2. Old Dubai tour (Al Seef district, Abra taxi, Gold &amp; Spice Souk)</option>
+                <option value="Visit Dubai Mall, Shopping and see Dubai Fountain show (After 6 PM)">C3. Visit Dubai Mall, Shopping and see Dubai Fountain show (After 6 PM)</option>
+            </optgroup>
+            <optgroup label="D. Abu Dhabi Tour">
+                <option value="Visit Sheikh Zayed Grand Mosque">D1. Visit Sheikh Zayed Grand Mosque</option>
+                <option value="Photo stop at Emirates Palace, Sheikh Palace, Abu Dhabi Corniche, Ferrari World">D2. Photo stop at Emirates Palace, Sheikh Palace, Corniche, Ferrari World</option>
+            </optgroup>
+            <optgroup label="E. Desert Safari">
+                <option value="Afternoon Desert Safari, Dune Bashing, Free entertainment at Camp, BBQ Dinner buffet">E. Afternoon Desert Safari, Dune Bashing, Free entertainment at Camp, BBQ Dinner buffet</option>
+            </optgroup>
+            <optgroup label="F. Ticket Excursion">
+                <option value="Visit Miracle Garden (Inc Ticket)">F1. Visit Miracle Garden (Inc Ticket)</option>
+                <option value="To Top Burj Khalifa 124th floor non-prime time (Inc Ticket)">F2. To Top Burj Khalifa 124th floor non-prime time (Inc Ticket)</option>
+                <option value="Dhow Cruise Dinner Marina">F3. Dhow Cruise Dinner Marina</option>
+                <option value="Entry Ferrari World (Inc Ticket)">F4. Entry Ferrari World (Inc Ticket)</option>
+            </optgroup>
+            <optgroup label="G. Meals">
+                <option value="Breakfast at Restaurant">G1. Breakfast at Restaurant</option>
+                <option value="Lunch at Restaurant">G2. Lunch at Restaurant</option>
+                <option value="Dinner at Restaurant">G3. Dinner at Restaurant</option>
+                <option value="Breakfast Box">G4. Breakfast Box</option>
+                <option value="Lunch Box">G5. Lunch Box</option>
+                <option value="Dinner Box">G6. Dinner Box</option>
+                <option value="Snack Box">G7. Snack Box</option>
+            </optgroup>
+        
+                </select>
+                <div class="flex gap-1 ml-auto">
+                    <button type="button" onclick="geserBarisAtas(1, 1)" class="text-slate-500 hover:bg-slate-200 px-1.5 py-0.5 rounded text-xs font-bold" title="Move Up">↑</button>
+                    <button type="button" onclick="geserBarisBawah(1, 1)" class="text-slate-500 hover:bg-slate-200 px-1.5 py-0.5 rounded text-xs font-bold" title="Move Down">↓</button>
+                    <button type="button" onclick="hapusBarisAktivitas(1, 1)" class="text-red-500 hover:bg-red-50 px-1.5 py-0.5 rounded text-xs font-bold" title="Delete">✕</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-1">
+                <input type="text" value="Lunch at Restaurant" placeholder="✍️ ATAU ketik manual aktivitas di sini (Dropdown akan diabaikan)..." oninput="saveDataToArray(1, 1)" class="w-full p-1 border rounded text-[10px] bg-emerald-50/40 focus:bg-white text-emerald-900 font-medium outline-none">
+                <input type="text" value="" placeholder="📌 Catatan tambahan / detail memo..." oninput="saveDataToArray(1, 1)" class="w-full p-1 border rounded text-[10px] bg-sky-50/50 focus:bg-white text-slate-600 font-medium outline-none">
+            </div>
+        </div><div class="flex flex-col gap-1.5 border-b border-slate-200 pb-3 mb-1 last:border-none last:pb-0 last:mb-0">
+            <div class="flex gap-1.5 items-center">
+                <input type="text" value="" placeholder="Time" oninput="saveDataToArray(1, 2)" class="w-16 p-1 border rounded text-[11px] text-center font-medium bg-slate-50 focus:bg-white outline-none">
+                <input type="text" value="" placeholder="Flight" oninput="saveDataToArray(1, 2)" class="w-20 p-1 border rounded text-[11px] text-center uppercase font-bold bg-rose-50/50 focus:bg-white outline-none text-rose-900">
+                <select onchange="saveDataToArray(1, 2)" class="w-1/2 p-1 border rounded text-[11px] outline-none bg-white font-medium">
+                    
+            <option value="">-- Pilih Template... --</option>
+            <optgroup label="A. Arrival / Departure / Transfer">
+                <option value="Arrival at Dubai International airport and process Immigration">A1. Arrival at Dubai International airport and process Immigration</option>
+                <option value="Arrival at Zayed International airport Abu Dhabi and Process Immigration">A2. Arrival at Zayed International airport Abu Dhabi and Process Immigration</option>
+                <option value="Transfer out to Dubai International airport">A3. Transfer out to Dubai International airport</option>
+                <option value="Transfer out to Zayed International airport Abu Dhabi">A4. Transfer out to Zayed International airport Abu Dhabi</option>
+                <option value="Transfer to Dubai">A5. Transfer to Dubai</option>
+                <option value="Transfer to Abu Dhabi">A6. Transfer to Abu Dhabi</option>
+                <option value="Flight departure to ...">A7. Flight departure to ...</option>
+            </optgroup>
+            <optgroup label="B. Meet and Greet">
+                <option value="Meet and Greet with tour guide">B. Meet and Greet with tour guide</option>
+            </optgroup>
+            <optgroup label="C. Dubai Tour">
+                <option value="Modern Dubai Tour Photo stop (Museum of the Future, Photo stop Burj Khalifa, Photo stop at Jumeirah beach, Photo stop Dubai Marina)">C1. Modern Dubai Tour Photo stop (Museum of the Future, Burj Khalifa, Jumeirah Beach, Dubai Marina)</option>
+                <option value="Old Dubai tour (Photo stop at Al Seef district, Abra taxi, Visit Gold and Spice souk)">C2. Old Dubai tour (Al Seef district, Abra taxi, Gold &amp; Spice Souk)</option>
+                <option value="Visit Dubai Mall, Shopping and see Dubai Fountain show (After 6 PM)">C3. Visit Dubai Mall, Shopping and see Dubai Fountain show (After 6 PM)</option>
+            </optgroup>
+            <optgroup label="D. Abu Dhabi Tour">
+                <option value="Visit Sheikh Zayed Grand Mosque">D1. Visit Sheikh Zayed Grand Mosque</option>
+                <option value="Photo stop at Emirates Palace, Sheikh Palace, Abu Dhabi Corniche, Ferrari World">D2. Photo stop at Emirates Palace, Sheikh Palace, Corniche, Ferrari World</option>
+            </optgroup>
+            <optgroup label="E. Desert Safari">
+                <option value="Afternoon Desert Safari, Dune Bashing, Free entertainment at Camp, BBQ Dinner buffet">E. Afternoon Desert Safari, Dune Bashing, Free entertainment at Camp, BBQ Dinner buffet</option>
+            </optgroup>
+            <optgroup label="F. Ticket Excursion">
+                <option value="Visit Miracle Garden (Inc Ticket)">F1. Visit Miracle Garden (Inc Ticket)</option>
+                <option value="To Top Burj Khalifa 124th floor non-prime time (Inc Ticket)">F2. To Top Burj Khalifa 124th floor non-prime time (Inc Ticket)</option>
+                <option value="Dhow Cruise Dinner Marina">F3. Dhow Cruise Dinner Marina</option>
+                <option value="Entry Ferrari World (Inc Ticket)">F4. Entry Ferrari World (Inc Ticket)</option>
+            </optgroup>
+            <optgroup label="G. Meals">
+                <option value="Breakfast at Restaurant">G1. Breakfast at Restaurant</option>
+                <option value="Lunch at Restaurant">G2. Lunch at Restaurant</option>
+                <option value="Dinner at Restaurant">G3. Dinner at Restaurant</option>
+                <option value="Breakfast Box">G4. Breakfast Box</option>
+                <option value="Lunch Box">G5. Lunch Box</option>
+                <option value="Dinner Box">G6. Dinner Box</option>
+                <option value="Snack Box">G7. Snack Box</option>
+            </optgroup>
+        
+                </select>
+                <div class="flex gap-1 ml-auto">
+                    <button type="button" onclick="geserBarisAtas(1, 2)" class="text-slate-500 hover:bg-slate-200 px-1.5 py-0.5 rounded text-xs font-bold" title="Move Up">↑</button>
+                    <button type="button" onclick="geserBarisBawah(1, 2)" class="text-slate-500 hover:bg-slate-200 px-1.5 py-0.5 rounded text-xs font-bold" title="Move Down" disabled="" style="opacity: 0.3; cursor: not-allowed;">↓</button>
+                    <button type="button" onclick="hapusBarisAktivitas(1, 2)" class="text-red-500 hover:bg-red-50 px-1.5 py-0.5 rounded text-xs font-bold" title="Delete">✕</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-1">
+                <input type="text" value="Afternoon Desert Safari, Dune Bashing, Free entertainment at Camp, BBQ Dinner buffet" placeholder="✍️ ATAU ketik manual aktivitas di sini (Dropdown akan diabaikan)..." oninput="saveDataToArray(1, 2)" class="w-full p-1 border rounded text-[10px] bg-emerald-50/40 focus:bg-white text-emerald-900 font-medium outline-none">
+                <input type="text" value="" placeholder="📌 Catatan tambahan / detail memo..." oninput="saveDataToArray(1, 2)" class="w-full p-1 border rounded text-[10px] bg-sky-50/50 focus:bg-white text-slate-600 font-medium outline-none">
+            </div>
+        </div></div>
+            <div class="mt-3 text-right border-t border-slate-200 pt-3">
+                <button type="button" onclick="tambahBarisAktivitas(1)" class="text-xs bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-1.5 rounded font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm">➕ Add Row to Day 1</button>
+            </div>
+        </div><div class="flex flex-col md:flex-row gap-2 pt-2 mt-2">
+        <button type="button" onclick="tambahExtraHariGlobal()" class="flex-1 py-2 bg-cyan-800 hover:bg-cyan-900 text-white rounded text-xs font-bold transition-all shadow-sm cursor-pointer text-center">➕ Add Extra Day</button>
+        <button type="button" onclick="hapusHariTerakhirGlobal()" class="py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 px-3 rounded text-xs font-bold border border-rose-200 transition-all cursor-pointer flex-1">🗑️ Remove Last Day</button>
+    </div></div>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-cyan-950 border-b pb-2 mb-3 flex items-center gap-2">💵 4. Administrative &amp; General Fees (AED)</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Visa Fee / Pax (AED)</label>
+                        <input type="number" id="fixed_visa" value="" oninput="kalkulasiPaket()" class="w-full p-2 border rounded bg-white focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Tolls &amp; Parking / Group (AED)</label>
+                        <input type="number" id="fixed_parking" value="" oninput="kalkulasiPaket()" class="w-full p-2 border rounded bg-white focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-amber-800 font-bold mb-1">🎟️ Ticket / Group (AED)</label>
+                        <input type="number" id="group_ticket" value="" oninput="kalkulasiPaket()" class="w-full p-2 border border-amber-300 bg-amber-50 rounded font-semibold focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-blue-800 font-bold mb-1">➕ Add. Value / Group (AED)</label>
+                        <input type="number" id="group_additional" value="" oninput="kalkulasiPaket()" class="w-full p-2 border border-blue-300 bg-blue-50 rounded font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-cyan-950 border-b pb-2 mb-3 flex items-center gap-2">📈 5. Operator Profit Margin</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Margin Type</label>
+                        <select id="tipe_markup" onchange="kalkulasiPaket()" class="w-full p-2 border rounded bg-white font-medium focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                            <option value="nominal" selected="selected">Flat Nominal Per Pax (USD)</option>
+                            <option value="persen">Percentage (%)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Margin Value</label>
+                        <input type="number" id="nilai_markup" value="" oninput="kalkulasiPaket()" class="w-full p-2 border rounded bg-white focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 shadow-sm space-y-3">
+                <h3 class="font-bold text-cyan-950 border-b pb-2 flex items-center gap-2">📝 6. Proposal Clauses Editor</h3>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Including Items</label>
+                    <textarea id="txt_inclusions" oninput="syncTextBlocks()" class="w-full p-2 border rounded bg-white text-xs h-24 font-medium focus:ring-2 focus:ring-cyan-500 focus:outline-none" placeholder="Enter inclusions...">✓ Deluxe AC Coach Transportation per daily plan
+✓ Professional English/Indonesian Speaking Guide
+✓ Meals (Lunch &amp; Dinner) as specified in itinerary
+✓ Entrance tickets to listed excursions
+✓ Accommodation on DBL/TWN Sharing basis</textarea>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Excluding Items</label>
+                    <textarea id="txt_exclusions" oninput="syncTextBlocks()" class="w-full p-2 border rounded bg-white text-xs h-24 font-medium focus:ring-2 focus:ring-cyan-500 focus:outline-none" placeholder="Enter exclusions...">✗ International Flight Tickets &amp; Airport Tax
+✗ Personal Expenses (Laundry, Telephone, Mini Bar)
+✗ Mandatory Tipping for Guide &amp; Driver (USD 5/pax/day)
+✗ Visa</textarea>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Terms &amp; Conditions</label>
+                    <textarea id="txt_terms" oninput="syncTextBlocks()" class="w-full p-2 border rounded bg-white text-xs h-24 font-medium focus:ring-2 focus:ring-cyan-500 focus:outline-none" placeholder="Enter terms...">• Rates are valid strictly for the specified group headcount tier.
+• 50% Non-Refundable Down Payment is required upon booking confirmation.
+• Balance payment must be fully settled 14 days prior to group arrival.</textarea>
+                </div>
+            </div>
+        </div>
+
+            <div id="section_penawaran" class="tab-content hidden">
+                <div class="mb-5 bg-slate-50 p-3 rounded border text-xs flex flex-col xl:flex-row justify-between items-center gap-4">
+                    <div class="flex flex-col sm:flex-row gap-4 sm:items-center w-full xl:w-auto">
+                        <div><strong>Client Name:</strong> <span id="lbl_client_name" class="font-bold text-slate-900">-</span></div>
+                        <div class="hidden sm:block text-slate-300">|</div>
+                        <div><strong>Duration:</strong> <span id="lbl_hari" class="font-bold text-cyan-900">1</span>D / <span id="lbl_malam" class="font-bold text-cyan-900">0</span>N</div>
+                    </div>
+                    
+                    <div class="no-print flex flex-wrap items-center gap-3 bg-white px-3 py-1.5 rounded border shadow-xs">
+                        <span class="font-bold text-[11px] text-cyan-950">📋 Rate Presentation Mode:</span>
+                        <div class="flex flex-wrap items-center gap-2 text-[11px]">
+                            <label class="flex items-center gap-1 font-semibold cursor-pointer select-none">
+                                <input type="radio" name="presentation_mode" value="matrix" checked="" onchange="kalkulasiPaket()" class="accent-cyan-800"> Matrix Tier
+                            </label>
+                            <label class="flex items-center gap-1 font-semibold cursor-pointer select-none">
+                                <input type="radio" name="presentation_mode" value="non-matrix" onchange="kalkulasiPaket()" class="accent-cyan-800"> Non-Matrix
+                            </label>
+                            <label class="flex items-center gap-1 font-bold text-amber-700 cursor-pointer select-none">
+                                <input type="radio" name="presentation_mode" value="no-hotel-matrix" onchange="kalkulasiPaket()" class="accent-cyan-800"> Without Hotel (Matrix)
+                            </label>
+                            <label class="flex items-center gap-1 font-bold text-orange-700 cursor-pointer select-none">
+                                <input type="radio" name="presentation_mode" value="no-hotel-nonmatrix" onchange="kalkulasiPaket()" class="accent-cyan-800"> Without Hotel (Non-Matrix)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="matrix_tier_container" class="mb-6 transition-all duration-300">
+                    <h3 id="table_title_label" class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2 border-b pb-1 flex items-center gap-1.5">📊 Rate (In USD)</h3>
+                    <div class="overflow-x-auto rounded border border-slate-200 shadow-xs">
+                        <table class="w-full text-center text-[10px] border-collapse">
+                            <thead>
+                                <tr class="bg-slate-700 text-white uppercase text-[9px] tracking-wider font-bold">
+                                    <th class="p-2 border border-slate-600" rowspan="2">Number of Pax</th>
+                                    <th class="p-2 border border-slate-600 bg-slate-800 text-cyan-200" rowspan="2">👤Total pax</th>
+                                    <th class="p-2 border border-slate-600 col-hotel-view" colspan="2" id="lbl_tbl_hotel_a">Hotel A</th>
+                                    <th class="p-2 border border-slate-600 col-hotel-view" colspan="2" id="lbl_tbl_hotel_b">Hotel B</th>
+                                    <th class="p-2 border border-slate-600 col-hotel-view" colspan="2" id="lbl_tbl_hotel_c">Hotel C</th>
+                                    <th class="p-2 border border-slate-600 col-no-hotel-view hidden bg-amber-800 text-white" rowspan="2">Land Arrangement Only</th>
+                                </tr>
+<tr class="bg-slate-600 text-slate-100 text-[8px] uppercase font-semibold col-hotel-view">
+    <td class="p-1 border border-slate-500 bg-yellow-50 text-yellow-900 font-bold">Half Twin</td>
+    <td class="p-1 border border-slate-500 bg-slate-200 text-slate-800 font-bold">Single Suppl.</td>
+    <td class="p-1 border border-slate-500 bg-yellow-50 text-yellow-900 font-bold sub-hotel-b">Half Twin</td>
+    <td class="p-1 border border-slate-500 bg-slate-200 text-slate-800 font-bold sub-hotel-b">Single Suppl.</td>
+    <td class="p-1 border border-slate-500 bg-yellow-50 text-yellow-900 font-bold sub-hotel-c">Half Twin</td>
+    <td class="p-1 border border-slate-500 bg-slate-200 text-slate-800 font-bold sub-hotel-c">Single Suppl.</td>
+</tr>
+                            </thead>
+                            <tbody id="matrix_table_body" class="divide-y divide-slate-200"><tr class="hover:bg-slate-50 transition-colors font-medium text-slate-700 text-xs">
+        <td class="p-2 border border-slate-200 font-bold bg-slate-50 text-slate-900">10 + 0 FOC</td>
+        <td class="p-2 border border-slate-200 font-bold bg-cyan-50/40 text-cyan-950 text-center">10 Pax</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+    </tr><tr class="hover:bg-slate-50 transition-colors font-medium text-slate-700 text-xs">
+        <td class="p-2 border border-slate-200 font-bold bg-slate-50 text-slate-900">15 + 0 FOC</td>
+        <td class="p-2 border border-slate-200 font-bold bg-cyan-50/40 text-cyan-950 text-center">15 Pax</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+    </tr><tr class="hover:bg-slate-50 transition-colors font-medium text-slate-700 text-xs">
+        <td class="p-2 border border-slate-200 font-bold bg-slate-50 text-slate-900">20 + 0 FOC</td>
+        <td class="p-2 border border-slate-200 font-bold bg-cyan-50/40 text-cyan-950 text-center">20 Pax</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+    </tr><tr class="hover:bg-slate-50 transition-colors font-medium text-slate-700 text-xs">
+        <td class="p-2 border border-slate-200 font-bold bg-slate-50 text-slate-900">25 + 0 FOC</td>
+        <td class="p-2 border border-slate-200 font-bold bg-cyan-50/40 text-cyan-950 text-center">25 Pax</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+    </tr><tr class="hover:bg-slate-50 transition-colors font-medium text-slate-700 text-xs">
+        <td class="p-2 border border-slate-200 font-bold bg-slate-50 text-slate-900">30 + 0 FOC</td>
+        <td class="p-2 border border-slate-200 font-bold bg-cyan-50/40 text-cyan-950 text-center">30 Pax</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+    </tr><tr class="hover:bg-slate-50 transition-colors font-medium text-slate-700 text-xs">
+        <td class="p-2 border border-slate-200 font-bold bg-slate-50 text-slate-900">35 + 0 FOC</td>
+        <td class="p-2 border border-slate-200 font-bold bg-cyan-50/40 text-cyan-950 text-center">35 Pax</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+    </tr><tr class="hover:bg-slate-50 transition-colors font-medium text-slate-700 text-xs">
+        <td class="p-2 border border-slate-200 font-bold bg-slate-50 text-slate-900">40 + 0 FOC</td>
+        <td class="p-2 border border-slate-200 font-bold bg-cyan-50/40 text-cyan-950 text-center">40 Pax</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">USD 0</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">USD 0</td>
+    </tr></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3 border-b pb-1 flex items-center gap-1.5">📍 Tour Schedule &amp; Carriers</h3>
+                <div class="overflow-x-auto rounded border border-slate-200 mb-6 shadow-xs">
+                    <table class="w-full text-left text-[11px] border-collapse">
+                        <thead>
+                            <tr class="bg-slate-800 text-white uppercase text-[9px] tracking-wider font-bold">
+                                <th class="p-2 border border-slate-700 text-center w-20">⏰Time</th>
+                                <th class="p-2 border border-slate-700 text-center w-24">✈️Carrier</th>
+                                <th class="p-2 border border-slate-700">📝Activity Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="out_itinerary_table_body" class="divide-y divide-slate-200"><tr class="bg-slate-800 text-white font-bold text-xs uppercase tracking-wider"><td colspan="3" class="p-2 border border-slate-700 font-bold text-left bg-gradient-to-r from-cyan-900 to-slate-800 text-white">🗓️ Day 1</td></tr></tbody>
+                    </table>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-slate-200">
+                    <div>
+                        <h4 class="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1">🟢 Including Items</h4>
+                        <div id="preview_inclusions" class="text-[11px] text-slate-600 leading-relaxed whitespace-pre-line font-medium bg-emerald-50/40 p-2.5 rounded border border-emerald-100">✓ Deluxe AC Coach Transportation per daily plan<br>✓ Professional English/Indonesian Speaking Guide<br>✓ Meals (Lunch &amp; Dinner) as specified in itinerary<br>✓ Entrance tickets to listed excursions<br>✓ Accommodation on DBL/TWN Sharing basis</div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1">🔴 Excluding Items</h4>
+                        <div id="preview_exclusions" class="text-[11px] text-slate-600 leading-relaxed whitespace-pre-line font-medium bg-rose-50/40 p-2.5 rounded border border-rose-100">✗ International Flight Tickets &amp; Airport Tax<br>✗ Personal Expenses (Laundry, Telephone, Mini Bar)<br>✗ Mandatory Tipping for Guide &amp; Driver (USD 5/pax/day)<br>✗ Tourism Dirham Fee paid directly to hotel</div>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-slate-200">
+                    <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1">📝 Terms &amp; Conditions</h4>
+                    <div id="preview_terms" class="text-[11px] text-slate-600 leading-relaxed whitespace-pre-line font-medium bg-slate-50 p-2.5 rounded border border-slate-200">• Rates are valid strictly for the specified group headcount tier.<br>• 50% Non-Refundable Down Payment is required upon booking confirmation.<br>• Balance payment must be fully settled 14 days prior to group arrival.</div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t-2 border-dashed border-slate-200 text-right no-print">
+                    <button type="button" onclick="bukaFormKonfirmasi()" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all transform active:scale-95 cursor-pointer flex items-center justify-center gap-2 text-sm">
+                        ✅ Confirm Itinerary &amp; Create Operational Form
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="section_confirmation_form" class="tab-content border-t-4 border-emerald-600 bg-slate-50 p-4 space-y-4 section-confirmation hidden">
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-md">
+            
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-3 mb-4 gap-2">
+                <div>
+                    <h2 class="text-lg font-bold text-emerald-950 flex items-center gap-2">📋 Confirmed Operational Tour Itinerary</h2>
+                </div>
+                <button onclick="printConfirmation()" class="no-print bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-bold text-xs shadow transition-all cursor-pointer">
+                    🖨️ Print Final Operational Document
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+                <div class="space-y-2 bg-slate-50/80 p-2 rounded-lg border border-slate-200 md:col-span-2">
+                    <h3 class="text-xs font-bold uppercase text-slate-700 tracking-wider border-b pb-1 mb-1">🛬 Arrival &amp; Transport details</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase text-slate-600 mb-0.5">✈️Flight Detail - Arrival</label>
+                            <input type="text" id="conf_flight_arrival" placeholder="Contoh: EK 359 ARR 08:00" class="w-full p-2 border border-slate-300 rounded bg-white text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none" value="">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase text-slate-600 mb-0.5">✈️Flight Detail - Departure</label>
+                            <input type="text" id="conf_flight_departure" placeholder="Contoh: EK 356 DEP 14:00" class="w-full p-2 border border-slate-300 rounded bg-white text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none" value="">
+                        </div>
+                    </div>
+                    <div class="mt-1">
+                        <label class="block text-[10px] font-bold uppercase text-slate-600 mb-0.5">🪧Signboard Arrival | Total Pax</label>
+                        <input type="text" id="conf_signboard" placeholder="Contoh: WELCOME GROUP COMFORT TOUR INDONESIA" class="w-full p-2 border border-slate-300 rounded bg-white text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none" value="">
+                    </div>
+                </div>
+
+                <div class="space-y-2 bg-slate-50/80 p-2 rounded-lg border border-slate-200">
+                    <h3 class="text-xs font-bold uppercase text-slate-700 tracking-wider border-b pb-1 mb-1">👥 Group Escort &amp; Leader</h3>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-slate-600 mb-0.5">👤Guests Leader | Mobile No</label>
+                        <input type="text" id="conf_guest_leader" placeholder="Contoh: Mr. Ahmad Sanusi + 15 Pax" class="w-full p-2 border border-slate-300 rounded bg-white text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none" value="">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-slate-600 mb-0.5">👨‍✈️Local Guide /Driver | Mobile No</label>
+                        <input type="text" id="conf_guide_driver" placeholder="Contoh: Guide Mr. Saeed / Driver Bilal (Bus No 45)" class="w-full p-2 border border-slate-300 rounded bg-white text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none" value="">
+                    </div>
+                </div>
+            </div>
+
+           <div class="mb-4" id="conf_hotel_section">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-xs font-bold uppercase text-slate-700 tracking-wider flex items-center gap-1">🏨 Final Hotel Accommodations Detail</h3>
+                    <span class="text-[10px] text-emerald-800 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 select-none">*below your hotel selected </span>
+                </div>
+                <div class="w-full">
+                    <table class="w-full block border-collapse" style="border: none; box-shadow: none;">
+                        <tbody class="block w-full bg-transparent">
+                            <tr id="row_hotel_a" class="hotel-row transition-colors bg-emerald-50 border-2 border-emerald-500 font-medium hotel-selected" style="display: block; width: 100%; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                                <td style="display: block; width: 100%; padding: 1rem; border: none;">
+                                    <div class="flex items-center gap-3 border-b border-emerald-200/60 pb-3 mb-3">
+                                        <div class="no-print">
+                                            <input type="radio" name="final_selected_hotel" value="a" checked="" onchange="highlightSelectedHotelRow()" class="accent-emerald-700 cursor-pointer w-4 h-4">
+                                        </div>
+                                        <span class="font-bold text-slate-800 text-sm uppercase tracking-wide" id="conf_lbl_hotel_a">Hotel A</span>
+                                    </div>
+                                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+                                       <div class="flex flex-wrap gap-4 items-start w-full max-w-5xl mx-auto p-4">
+    <!-- Check In -->
+    <div class="flex-1 min-w-[120px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">📥 Check In</label>
+        <input type="text" id="h_a_in" placeholder="DD-MMM-YY" class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs text-center focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+
+    <!-- Check Out -->
+    <div class="flex-1 min-w-[120px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">📥 Check Out</label>
+        <input type="text" id="h_a_out" placeholder="DD-MMM-YY" class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs text-center focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+
+    <!-- No of Room -->
+    <div class="flex-[1.5] min-w-[150px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">🚪 No of Room</label>
+        <input type="text" id="h_a_room" placeholder="e.g. 5 Twin" class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+
+    <!-- Hotel Address -->
+    <div class="flex-[2] min-w-[250px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">📍 Hotel Address</label>
+        <input type="text" id="h_a_addr" placeholder="Street/Area address..." class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+</div>
+                                </td>
+                            </tr>
+                            
+                            <tr id="row_hotel_b" class="hotel-row transition-colors bg-white opacity-60" style="display: block; width: 100%; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                                <td style="display: block; width: 100%; padding: 1rem; border: none;">
+                                    <div class="flex items-center gap-3 border-b border-slate-200 pb-3 mb-3">
+                                        <div class="no-print">
+                                            <input type="radio" name="final_selected_hotel" value="b" onchange="highlightSelectedHotelRow()" class="accent-emerald-700 cursor-pointer w-4 h-4">
+                                        </div>
+                                        <span class="font-bold text-slate-800 text-sm uppercase tracking-wide" id="conf_lbl_hotel_b">Hotel B</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                       <div class="flex flex-wrap gap-4 items-start w-full max-w-5xl mx-auto p-4">
+    <!-- Check In -->
+    <div class="flex-1 min-w-[120px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">📥 Check In</label>
+        <input type="text" id="h_b_in" placeholder="DD-MMM-YY" class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs text-center focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+
+    <!-- Check Out -->
+    <div class="flex-1 min-w-[120px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">📥 Check Out</label>
+        <input type="text" id="h_b_out" placeholder="DD-MMM-YY" class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs text-center focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+
+    <!-- No of Room -->
+    <div class="flex-[1.5] min-w-[150px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">🚪 No of Room</label>
+        <input type="text" id="h_b_room" placeholder="e.g. 5 Twin" class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+
+    <!-- Hotel Address -->
+    <div class="flex-[2] min-w-[250px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">📍 Hotel Address</label>
+        <input type="text" id="h_b_addr" placeholder="Street/Area address..." class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+</div>
+                                </td>
+                            </tr>
+                            
+                            <tr id="row_hotel_c" class="hotel-row transition-colors bg-white opacity-60" style="display: block; width: 100%; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                                <td style="display: block; width: 100%; padding: 1rem; border: none;">
+                                    <div class="flex items-center gap-3 border-b border-slate-200 pb-3 mb-3">
+                                        <div class="no-print">
+                                            <input type="radio" name="final_selected_hotel" value="c" onchange="highlightSelectedHotelRow()" class="accent-emerald-700 cursor-pointer w-4 h-4">
+                                        </div>
+                                        <span class="font-bold text-slate-800 text-sm uppercase tracking-wide" id="conf_lbl_hotel_c">Hotel C</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                       <div class="flex flex-wrap gap-4 items-start w-full max-w-5xl mx-auto p-4">
+    <!-- Check In -->
+    <div class="flex-1 min-w-[120px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">📥 Check In</label>
+        <input type="text" id="h_c_in" placeholder="DD-MMM-YY" class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs text-center focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+
+    <!-- Check Out -->
+    <div class="flex-1 min-w-[120px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">📥 Check Out</label>
+        <input type="text" id="h_c_out" placeholder="DD-MMM-YY" class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs text-center focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+
+    <!-- No of Room -->
+    <div class="flex-[1.5] min-w-[150px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">🚪 No of Room</label>
+        <input type="text" id="h_c_room" placeholder="e.g. 5 Twin" class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+
+    <!-- Hotel Address -->
+    <div class="flex-[2] min-w-[250px]">
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">📍 Hotel Address</label>
+        <input type="text" id="h_c_addr" placeholder="Street/Area address..." class="w-full p-2 border border-slate-300 bg-white rounded-md text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+    </div>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <h3 class="text-xs font-bold uppercase text-emerald-950 tracking-wider mb-2 flex items-center gap-1.5">📍 Final Scheduled Routing</h3>
+                <div class="overflow-x-auto rounded border border-emerald-200 shadow-xs">
+                    <table class="w-full text-left text-[11px] border-collapse">
+                        <thead>
+                            <tr class="bg-slate-800 text-white uppercase text-[9px] tracking-wider font-bold">
+                                <th class="p-2 border border-slate-700 text-center w-20">⏰Time</th>
+                                <th class="p-2 border border-slate-700 text-center w-24">✈️Carrier</th>
+                                <th class="p-2 border border-slate-700">📝Activity Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="confirm_itinerary_table_body" class="divide-y divide-slate-200 bg-white"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-amber-50/60 border border-amber-200 rounded-lg p-4 mb-4 text-xs text-slate-700">
+                <h3 class="text-xs font-bold uppercase text-amber-900 tracking-wider border-b border-amber-200 pb-1.5 mb-3 flex items-center gap-1">📌 General Operational Notes &amp; Memo</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-slate-600 w-44">1. Current Weather in Dubai :</span>
+                            <div class="flex items-center gap-1 font-semibold">
+                                <input type="number" id="conf_weather_temp" value="32" class="w-20 p-1.5 border border-slate-300 rounded bg-white text-center text-xs font-bold focus:outline-none"> 
+                                <span>°C</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="font-bold text-slate-600">2. Base Currency :</span> 
+                            <span class="font-medium text-slate-800 ml-1">AED (Dirham), Fixed Rate: 1 USD = 3.64 AED</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-slate-600">3. Charging Electric Plug :</span> 
+                            <span class="font-medium text-slate-800 ml-1">Three Pin (Type G BS-1363 standard)</span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div>
+                            <span class="font-bold text-rose-800">4. Emergency Contact :</span> 
+                            <span class="font-bold text-slate-900 ml-1">+971 56 273 8750</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-emerald-800">5. Tipping Policy :</span> 
+                            <span class="font-medium text-slate-800 ml-1">Group above 10 pax Guide and Driver 5 USD/pax/day, FIT below 10 pax guide and driver 10 usd/pax/day (please ignore if you have paid by your agent)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-300">
+                <h4 class="text-xs font-bold text-rose-900 uppercase tracking-wider mb-1 flex items-center gap-1">⚠️ Operational Liabilities Statement</h4>
+                <p id="conf_liability_text" class="text-[11px] text-slate-600 leading-relaxed bg-slate-100 p-3 rounded border border-slate-300 font-medium whitespace-pre-line">
+                    We are not liable for any delays, schedule changes, or losses caused by traffic congestion, road closures, vehicle breakdowns, or other circumstances beyond our direct control. Any additional expenses incurred as a result of these delays are the responsibility of the traveler.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+<script>
+let fileHandle = null;
+
+let tourData = {
+    "1": {
+        "costs": {
+            "transport": 0,
+            "guide": 0,
+            "meal1": 0,
+            "meal1_name": "",
+            "meal2": 0,
+            "meal2_name": "",
+            "meal3": 0,
+            "meal3_name": "",
+            "ticket1": 0,
+            "ticket1_name": "",
+            "ticket2": 0,
+            "ticket2_name": ""
+        },
+        "events": [
+            {
+                "jam": "",
+                "flight": "",
+                "aktivitas_drop": "",
+                "aktivitas_text": "",
+                "note": ""
+            },
+            {
+                "jam": "",
+                "flight": "",
+                "aktivitas_drop": "",
+                "aktivitas_text": "",
+                "note": ""
+            },
+            {
+                "jam": "",
+                "flight": "",
+                "aktivitas_drop": "",
+                "aktivitas_text": "",
+                "note": ""
+            }
+        ]
+    }
+};
+
+const companyProfiles = {
+    middex: {
+        title: "Middex Tourism",
+        line1: "PT Middex Dutaloka Adikarsa",
+        line2: "Jalan Raya Muchtar No 18, Sawangan Depok",
+        email: "Sharjah Research Technology and Innovation Park, Office - B51-195, UAE",
+        accent: "from-cyan-950 via-cyan-900 to-slate-800",
+        logo: "https://github.com/andriadithia-star/mda/blob/main/MASTER%20LOGO%20PNG2%20MIDDEX%20Biru%20merah.png?raw=true"
+    },
+    travia: {
+        title: "Travia Tour And Travel FZC",
+        line1: "Sharjah Research Technology and Innovation Park",
+        line2: "Block B, Office - B51-195",
+        email: "Sharjah, United Arab Emirates",
+        accent: "from-slate-900 via-indigo-950 to-slate-800",
+        logo: "https://github.com/andriadithia-star/mda/blob/main/logo%20PNG2%20travia%20copy.png?raw=true"
+    }
+};
+
+function shadowLogoInit() {
+    const cachedCompany = document.getElementById('company_selector').value || "middex";
+    const logoImg = document.getElementById('header_logo_img');
+    if (logoImg && companyProfiles[cachedCompany]) {
+        logoImg.src = companyProfiles[cachedCompany].logo;
+    }
+}
+
+function switchCompanyHeader() {
+    const selected = document.getElementById('company_selector').value;
+    const profile = companyProfiles[selected];
+    
+    const printHeaderContainer = document.getElementById('print_company_header');
+    printHeaderContainer.innerHTML = `
+        <div class="flex items-center justify-between gap-4 w-full">
+            <div>
+                <h1 class="text-2xl font-black tracking-wide">${profile.title}</h1>
+                <p class="text-xs font-semibold text-cyan-200 opacity-90">${profile.line1} | ${profile.line2}</p>
+                <p class="text-[11px] text-slate-300 font-mono mt-0.5">${profile.email}</p>
+            </div>
+            <div class="flex-shrink-0">
+                <img id="header_logo_img" src="${profile.logo}" alt="Logo" class="h-14 w-auto object-contain bg-white/10 p-1 rounded">
+            </div>
+        </div>
+    `;
+}
+
+function highlightSelectedHotelRow() {
+    const selected = document.querySelector('input[name="final_selected_hotel"]:checked').value;
+    const rowA = document.getElementById('row_hotel_a');
+    const rowB = document.getElementById('row_hotel_b');
+    const rowC = document.getElementById('row_hotel_c');
+
+    rowA.className = 'hotel-row transition-colors ' + (selected === 'a' ? 'bg-emerald-50 border-2 border-emerald-500 font-medium hotel-selected' : 'bg-white opacity-60');
+    rowB.className = 'hotel-row transition-colors ' + (selected === 'b' ? 'bg-emerald-50 border-2 border-emerald-500 font-medium hotel-selected' : 'bg-white opacity-60');
+    rowC.className = 'hotel-row transition-colors ' + (selected === 'c' ? 'bg-emerald-50 border-2 border-emerald-500 font-medium hotel-selected' : 'bg-white opacity-60');
+}
+
+function printQuotation() {
+    document.body.setAttribute('data-print-mode', 'quotation');
+    window.print();
+}
+
+function printConfirmation() {
+    document.body.setAttribute('data-print-mode', 'confirmation');
+    window.print();
+}
+
+function bukaFormKonfirmasi() {
+    syncHotelNamesToConfirm();
+    duplikasiItineraryKeConfirm();
+    highlightSelectedHotelRow();
+    openTab('section_confirmation_form');
+}
+
+function openTab(tabName) {
+    let contents = document.querySelectorAll('.tab-content');
+    contents.forEach(content => content.classList.add('hidden'));
+
+    let buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => {
+        btn.classList.remove('bg-cyan-600');
+        btn.classList.add('bg-slate-600');
+    });
+
+    document.getElementById(tabName).classList.remove('hidden');
+    document.getElementById('btn-' + tabName).classList.remove('bg-slate-600');
+    document.getElementById('btn-' + tabName).classList.add('bg-cyan-600');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function syncHotelNamesToConfirm() {
+    document.getElementById('conf_lbl_hotel_a').innerText = document.getElementById('hotel_a_name').value || "Hotel A";
+    document.getElementById('conf_lbl_hotel_b').innerText = document.getElementById('hotel_b_name').value || "Hotel B";
+    document.getElementById('conf_lbl_hotel_c').innerText = document.getElementById('hotel_c_name').value || "Hotel C";
+}
+
+function duplikasiItineraryKeConfirm() {
+    const sourceTableBody = document.getElementById('out_itinerary_table_body');
+    const destTableBody = document.getElementById('confirm_itinerary_table_body');
+    destTableBody.innerHTML = sourceTableBody.innerHTML;
+}
+
+function syncClientName() {
+    const nameInput = document.getElementById('client_name').value;
+    document.getElementById('lbl_client_name').innerText = nameInput ? nameInput : "-";
+}
+
+function dapatkanFormatTanggal(inputDate, dayOffset) {
+    if (!inputDate) return "";
+    let date = new Date(inputDate);
+    date.setDate(date.getDate() + dayOffset);
+    const day = String(date.getDate()).padStart(2, '0');
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    return ` - ${day} ${months[date.getMonth()]} ${date.getFullYear()}`;
+}
+
+function checkActivityColorClass(text) {
+    const lowered = text.toLowerCase();
+    if (lowered.includes('breakfast') || lowered.includes('lunch') || lowered.includes('dinner')) {
+        return 'text-blue-950 font-black bg-blue-50/40';
+    }
+    return 'text-slate-700';
+}
+
+function inisialisasiItinerary() {
+    const baseDurasi = Math.max(1, parseInt(document.getElementById('durasi_hari').value) || 1);
+    const currentDays = Object.keys(tourData).map(Number);
+    currentDays.forEach(day => {
+        if (day > baseDurasi) delete tourData[day];
+    });
+    for (let i = 1; i <= baseDurasi; i++) {
+        if (!tourData[i]) {
+            tourData[i] = {
+                costs: { transport: 0, guide: 0, meal1: 0, meal1_name: "", meal2: 0, meal2_name: "", meal3: 0, meal3_name: "", ticket1: 0, ticket1_name: "", ticket2: 0, ticket2_name: "" },
+                events: [{ jam: "", flight: "", aktivitas_drop: "", aktivitas_text: "", note: "" }]
+            };
+        }
+    }
+    renderAllDays();
+    syncItineraryPreview();
+}
+
+function renderAllDays() {
+    const container = document.getElementById('itinerary_input_container');
+    container.innerHTML = '';
+    const days = Object.keys(tourData).map(Number).sort((a,b) => a-b);
+    
+    days.forEach(i => {
+        const dayBox = document.createElement('div');
+        dayBox.className = 'bg-white p-4 rounded-lg border border-slate-300 shadow-xs space-y-3';
+        dayBox.innerHTML = `
+            <div class="flex justify-between items-center border-b pb-1.5">
+                <span class="text-xs font-bold text-cyan-950 uppercase tracking-wide">🗓️ Day ${i} Rates & Plan</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 bg-slate-50 p-3 rounded border border-slate-200 text-[10px]">
+                <div class="flex gap-2">
+                    <div class="flex-1">
+                        <label class="block text-[9px] text-slate-500 font-bold uppercase mb-0.5">🚌 Coach (AED)</label>
+                        <input type="number" value="${tourData[i].costs.transport || 0}" oninput="saveDailyCost(${i}, 'transport', this.value)" class="w-full p-1.5 border bg-white rounded font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-[9px] text-slate-500 font-bold uppercase mb-0.5">🤠 Guide (AED)</label>
+                        <input type="number" value="${tourData[i].costs.guide || 0}" oninput="saveDailyCost(${i}, 'guide', this.value)" class="w-full p-1.5 border bg-white rounded font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                    </div>
+                </div>
+                <div class="border border-slate-200 bg-white p-2 rounded">
+                    <label class="block text-[9px] text-slate-500 font-bold uppercase mb-1">🎟️ Tickets</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <input type="text" placeholder="Ticket 1 Name" value="${tourData[i].costs.ticket1_name || ''}" oninput="saveDailyText(${i}, 'ticket1_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="${tourData[i].costs.ticket1 || 0}" oninput="saveDailyCost(${i}, 'ticket1', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Ticket 2 Name" value="${tourData[i].costs.ticket2_name || ''}" oninput="saveDailyText(${i}, 'ticket2_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="${tourData[i].costs.ticket2 || 0}" oninput="saveDailyCost(${i}, 'ticket2', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-2 border border-slate-200 bg-white p-2 rounded">
+                    <label class="block text-[9px] text-slate-500 font-bold uppercase mb-1">🍽️ Meals & Restaurant</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div>
+                            <input type="text" placeholder="Meal 1 / Resto" value="${tourData[i].costs.meal1_name || ''}" oninput="saveDailyText(${i}, 'meal1_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="${tourData[i].costs.meal1 || 0}" oninput="saveDailyCost(${i}, 'meal1', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Meal 2 / Resto" value="${tourData[i].costs.meal2_name || ''}" oninput="saveDailyText(${i}, 'meal2_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="${tourData[i].costs.meal2 || 0}" oninput="saveDailyCost(${i}, 'meal2', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Meal 3 / Resto" value="${tourData[i].costs.meal3_name || ''}" oninput="saveDailyText(${i}, 'meal3_name', this.value)" class="w-full p-1 mb-1 border rounded text-[9px] focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                            <input type="number" placeholder="Cost" value="${tourData[i].costs.meal3 || 0}" oninput="saveDailyCost(${i}, 'meal3', this.value)" class="w-full p-1 border rounded text-[9px] font-bold focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="day_rows_${i}" class="space-y-3 mt-2"></div>
+            <div class="mt-3 text-right border-t border-slate-200 pt-3">
+                <button type="button" onclick="tambahBarisAktivitas(${i})" class="text-xs bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-1.5 rounded font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm">➕ Add Row to Day ${i}</button>
+            </div>
+        `;
+        container.appendChild(dayBox);
+        renderBarisAktivitasInput(i);
+    });
+
+    const globalControls = document.createElement('div');
+    globalControls.className = 'flex flex-col md:flex-row gap-2 pt-2 mt-2';
+    
+    globalControls.innerHTML = `
+        <button type="button" onclick="tambahExtraHariGlobal()" class="flex-1 py-2 bg-cyan-800 hover:bg-cyan-900 text-white rounded text-xs font-bold transition-all shadow-sm cursor-pointer text-center">➕ Add Extra Day</button>
+        <button type="button" onclick="hapusHariTerakhirGlobal()" class="py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 px-3 rounded text-xs font-bold border border-rose-200 transition-all cursor-pointer flex-1">🗑️ Remove Last Day</button>
+    `;
+    container.appendChild(globalControls);
+}
+
+function renderBarisAktivitasInput(day) {
+    const rowContainer = document.getElementById(`day_rows_${day}`);
+    rowContainer.innerHTML = '';
+    tourData[day].events.forEach((item, index) => {
+        const row = document.createElement('div');
+        row.className = 'flex flex-col gap-1.5 border-b border-slate-200 pb-3 mb-1 last:border-none last:pb-0 last:mb-0';
+        
+        let activityOptions = `
+            <option value="">-- Pilih Template... --</option>
+            <optgroup label="A. Arrival / Departure / Transfer">
+                <option value="Arrival at Dubai International airport and process Immigration">A1. Arrival at Dubai International airport and process Immigration</option>
+                <option value="Arrival at Zayed International airport Abu Dhabi and Process Immigration">A2. Arrival at Zayed International airport Abu Dhabi and Process Immigration</option>
+                <option value="Transfer out to Dubai International airport">A3. Transfer out to Dubai International airport</option>
+                <option value="Transfer out to Zayed International airport Abu Dhabi">A4. Transfer out to Zayed International airport Abu Dhabi</option>
+                <option value="Transfer to Dubai">A5. Transfer to Dubai</option>
+                <option value="Transfer to Abu Dhabi">A6. Transfer to Abu Dhabi</option>
+                <option value="Flight departure to ...">A7. Flight departure to ...</option>
+            </optgroup>
+            <optgroup label="B. Meet and Greet">
+                <option value="Meet and Greet with tour guide">B. Meet and Greet with tour guide</option>
+            </optgroup>
+            <optgroup label="C. Dubai Tour">
+                <option value="Modern Dubai Tour Photo stop (Museum of the Future, Photo stop Burj Khalifa, Photo stop at Jumeirah beach, Photo stop Dubai Marina)">C1. Modern Dubai Tour Photo stop (Museum of the Future, Burj Khalifa, Jumeirah Beach, Dubai Marina)</option>
+                <option value="Old Dubai tour (Photo stop at Al Seef district, Abra taxi, Visit Gold and Spice souk)">C2. Old Dubai tour (Al Seef district, Abra taxi, Gold &amp; Spice Souk)</option>
+                <option value="Visit Dubai Mall, Shopping and see Dubai Fountain show (After 6 PM)">C3. Visit Dubai Mall, Shopping and see Dubai Fountain show (After 6 PM)</option>
+            </optgroup>
+            <optgroup label="D. Abu Dhabi Tour">
+                <option value="Visit Sheikh Zayed Grand Mosque">D1. Visit Sheikh Zayed Grand Mosque</option>
+                <option value="Photo stop at Emirates Palace, Sheikh Palace, Abu Dhabi Corniche, Ferrari World">D2. Photo stop at Emirates Palace, Sheikh Palace, Corniche, Ferrari World</option>
+            </optgroup>
+            <optgroup label="E. Desert Safari">
+                <option value="Afternoon Desert Safari, Dune Bashing, Free entertainment at Camp, BBQ Dinner buffet">E. Afternoon Desert Safari, Dune Bashing, Free entertainment at Camp, BBQ Dinner buffet</option>
+            </optgroup>
+            <optgroup label="F. Ticket Excursion">
+                <option value="Visit Miracle Garden (Inc Ticket)">F1. Visit Miracle Garden (Inc Ticket)</option>
+                <option value="To Top Burj Khalifa 124th floor non-prime time (Inc Ticket)">F2. To Top Burj Khalifa 124th floor non-prime time (Inc Ticket)</option>
+                <option value="Dhow Cruise Dinner Marina">F3. Dhow Cruise Dinner Marina</option>
+                <option value="Entry Ferrari World (Inc Ticket)">F4. Entry Ferrari World (Inc Ticket)</option>
+            </optgroup>
+            <optgroup label="G. Meals">
+                <option value="Breakfast at Restaurant">G1. Breakfast at Restaurant</option>
+                <option value="Lunch at Restaurant">G2. Lunch at Restaurant</option>
+                <option value="Dinner at Restaurant">G3. Dinner at Restaurant</option>
+                <option value="Breakfast Box">G4. Breakfast Box</option>
+                <option value="Lunch Box">G5. Lunch Box</option>
+                <option value="Dinner Box">G6. Dinner Box</option>
+                <option value="Snack Box">G7. Snack Box</option>
+            </optgroup>
+	<optgroup label="H. Additional Activities">
+                <option value="check in hotel and overnight">A. check in hotel and overnight</option>
+                <option value="Check out Hotel">B. Check out Hotel</option>
+                <option value="Back to Hotel">C. Back to Hotel</option>
+                <option value="Breakfast at Hotel">D. Breakfast at Hotel</option>
+                <option value="Morning Desert Safari (Only Dune Bashing)">E. Morning Desert Safari (Only Dune Bashing)</option>
+                <option value="Arrival at Hamad Airport Doha">F. Arrival at Hamad Airport Doha</option>
+                <option value="Transfer out to Hamad Airport Doha">G. Transfer out to Hamad Airport Doha</option>
+                <option value="Free at Hotel">H. Free at Hotel</option>
+            </optgroup>
+        `;
+
+        row.innerHTML = `
+            <div class="flex gap-1.5 items-center">
+                <input type="text" value="${item.jam}" placeholder="Time" oninput="saveDataToArray(${day}, ${index})" class="w-16 p-1 border rounded text-[11px] text-center font-medium bg-slate-50 focus:bg-white outline-none">
+                <input type="text" value="${item.flight || ''}" placeholder="Flight" oninput="saveDataToArray(${day}, ${index})" class="w-20 p-1 border rounded text-[11px] text-center uppercase font-bold bg-rose-50/50 focus:bg-white outline-none text-rose-900">
+                <select onchange="saveDataToArray(${day}, ${index})" class="w-1/2 p-1 border rounded text-[11px] outline-none bg-white font-medium">
+                    ${activityOptions}
+                </select>
+                <div class="flex gap-1 ml-auto">
+                    <button type="button" onclick="geserBarisAtas(${day}, ${index})" class="text-slate-500 hover:bg-slate-200 px-1.5 py-0.5 rounded text-xs font-bold" title="Move Up" ${index === 0 ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''}>↑</button>
+                    <button type="button" onclick="geserBarisBawah(${day}, ${index})" class="text-slate-500 hover:bg-slate-200 px-1.5 py-0.5 rounded text-xs font-bold" title="Move Down" ${index === tourData[day].events.length - 1 ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''}>↓</button>
+                    <button type="button" onclick="hapusBarisAktivitas(${day}, ${index})" class="text-red-500 hover:bg-red-50 px-1.5 py-0.5 rounded text-xs font-bold" title="Delete">✕</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-1">
+                <input type="text" value="${item.aktivitas_text || ''}" placeholder="✍️ ATAU ketik manual aktivitas di sini (Dropdown akan diabaikan)..." oninput="saveDataToArray(${day}, ${index})" class="w-full p-1 border rounded text-[10px] bg-emerald-50/40 focus:bg-white text-emerald-900 font-medium outline-none">
+                <input type="text" value="${item.note || ''}" placeholder="📌 Catatan tambahan / detail memo..." oninput="saveDataToArray(${day}, ${index})" class="w-full p-1 border rounded text-[10px] bg-sky-50/50 focus:bg-white text-slate-600 font-medium outline-none">
+            </div>
+        `;
+
+        rowContainer.appendChild(row);
+
+        const selectActivityElement = row.querySelector('select');
+        if (item.aktivitas_drop) selectActivityElement.value = item.aktivitas_drop;
+    });
+}
+
+function geserBarisAtas(day, index) {
+    if (index > 0) {
+        const temp = tourData[day].events[index - 1];
+        tourData[day].events[index - 1] = tourData[day].events[index];
+        tourData[day].events[index] = temp;
+        renderBarisAktivitasInput(day);
+        syncItineraryPreview();
+    }
+}
+
+function geserBarisBawah(day, index) {
+    if (index < tourData[day].events.length - 1) {
+        const temp = tourData[day].events[index + 1];
+        tourData[day].events[index + 1] = tourData[day].events[index];
+        tourData[day].events[index] = temp;
+        renderBarisAktivitasInput(day);
+        syncItineraryPreview();
+    }
+}
+
+function saveDailyCost(day, field, val) {
+    if(!tourData[day].costs) tourData[day].costs = {};
+    tourData[day].costs[field] = parseFloat(val) || 0;
+    kalkulasiPaket();
+}
+
+function saveDailyText(day, field, val) {
+    if(!tourData[day].costs) tourData[day].costs = {};
+    tourData[day].costs[field] = val;
+}
+
+function tambahExtraHariGlobal() {
+    const currentDays = Object.keys(tourData).map(Number);
+    const maxDay = currentDays.length > 0 ? Math.max(...currentDays) : 0;
+    const nextDay = maxDay + 1;
+    
+    tourData[nextDay] = {
+        costs: { transport: 0, guide: 0, meal1: 0, meal1_name: "", meal2: 0, meal2_name: "", meal3: 0, meal3_name: "", ticket1: 0, ticket1_name: "", ticket2: 0, ticket2_name: "" },
+        events: [{ jam: "", flight: "", aktivitas_drop: "", aktivitas_text: "", note: "" }]
+    };
+    
+    renderAllDays();
+    syncItineraryPreview();
+    kalkulasiPaket();
+}
+
+function hapusHariTerakhirGlobal() {
+    const currentDays = Object.keys(tourData).map(Number);
+    const maxDay = currentDays.length > 0 ? Math.max(...currentDays) : 0;
+    const baseDurasi = parseInt(document.getElementById('durasi_hari').value) || 1;
+    
+    if (maxDay > baseDurasi) {
+        delete tourData[maxDay];
+        renderAllDays();
+        syncItineraryPreview();
+        kalkulasiPaket();
+    } else {
+        alert("Cannot delete below base Duration (Days) setting. Please reduce Duration (Days) above if needed.");
+    }
+}
+
+function tambahBarisAktivitas(day) {
+    tourData[day].events.push({ jam: "", flight: "", aktivitas_drop: "", aktivitas_text: "", note: "" });
+    renderBarisAktivitasInput(day);
+    syncItineraryPreview();
+}
+
+function hapusBarisAktivitas(day, index) {
+    if (tourData[day].events.length > 1) {
+        tourData[day].events.splice(index, 1);
+    } else {
+        tourData[day].events = [{ jam: "", flight: "", aktivitas_drop: "", aktivitas_text: "", note: "" }];
+    }
+    renderBarisAktivitasInput(day);
+    syncItineraryPreview();
+}
+
+function saveDataToArray(day, index) {
+    const rowContainer = document.getElementById(`day_rows_${day}`);
+    const row = rowContainer.children[index];
+    if (row) {
+        const inputJam = row.querySelectorAll('input')[0];
+        const inputFlight = row.querySelectorAll('input')[1];
+        const selectActivity = row.querySelector('select');
+        const inputActText = row.querySelectorAll('input')[2];
+        const inputNote = row.querySelectorAll('input')[3];
+        
+        tourData[day].events[index].jam = inputJam.value;
+        tourData[day].events[index].flight = inputFlight.value;
+        tourData[day].events[index].aktivitas_drop = selectActivity.value;
+        tourData[day].events[index].aktivitas_text = inputActText.value;
+        tourData[day].events[index].note = inputNote.value;
+        
+        syncItineraryPreview();
+    }
+}
+
+function syncItineraryPreview() {
+    const tableBody = document.getElementById('out_itinerary_table_body');
+    tableBody.innerHTML = '';
+    const dateInputVal = document.getElementById('start_date').value;
+    const days = Object.keys(tourData).map(Number).sort((a, b) => a - b);
+
+    days.forEach(i => {
+        const dayData = tourData[i] || { events: [] };
+        if (dayData.events.length === 0) return;
+        const stringTanggal = dapatkanFormatTanggal(dateInputVal, i - 1);
+
+        const trHeader = document.createElement('tr');
+        trHeader.className = "bg-slate-800 text-white font-bold text-xs uppercase tracking-wider";
+        trHeader.innerHTML = `<td colspan="3" class="p-2 border border-slate-700 font-bold text-left bg-gradient-to-r from-cyan-900 to-slate-800 text-white">🗓️ Day ${i}${stringTanggal}</td>`;
+        tableBody.appendChild(trHeader);
+
+        dayData.events.forEach(item => {
+            if (!item.jam && !item.flight && !item.aktivitas_drop && !item.aktivitas_text && !item.note) return;
+            
+            let teksAktivitasUtama = "";
+            if (item.aktivitas_text && item.aktivitas_text.trim() !== "") {
+                teksAktivitasUtama = item.aktivitas_text;
+            } else if (item.aktivitas_drop) {
+                teksAktivitasUtama = item.aktivitas_drop;
+            }
+
+            let parts = [];
+            if (teksAktivitasUtama) parts.push(teksAktivitasUtama);
+            if (item.note) parts.push(item.note);
+            
+            let gabunganAktivitas = parts.join(', ');
+            let styleWarnaAktivitas = checkActivityColorClass(gabunganAktivitas);
+
+            const tr = document.createElement('tr');
+            tr.className = "hover:bg-slate-50 transition-colors " + (styleWarnaAktivitas.includes('bg-blue-50') ? 'bg-blue-50/20' : '');
+            tr.innerHTML = `
+                <td class="p-2 border border-slate-200 text-center font-semibold text-slate-600 whitespace-nowrap">${item.jam || '--:--'}</td>
+                <td class="p-2 border border-slate-200 text-center font-bold text-rose-800 bg-rose-50/50 uppercase whitespace-nowrap">${item.flight || '-'}</td>
+                <td class="p-2 border border-slate-200 leading-relaxed ${styleWarnaAktivitas}">${gabunganAktivitas || '-'}</td>
+            `;
+            tableBody.appendChild(tr);
+        });
+    });
+    if(!document.getElementById('section_confirmation_form').classList.contains('hidden')) {
+        duplikasiItineraryKeConfirm();
+    }
+}
+
+function syncTextBlocks() {
+    document.getElementById('preview_inclusions').innerText = document.getElementById('txt_inclusions').value;
+    document.getElementById('preview_exclusions').innerText = document.getElementById('txt_exclusions').value;
+    document.getElementById('preview_terms').innerText = document.getElementById('txt_terms').value;
+}
+
+function executeFormula(payingPax, focPax, totalMalam, globalFixedVehicles, sumDailyMeals, sumDailyExcursions, sumDailyTransport, sumDailyGuide, hotelDblCost, markupType, markupVal, exRate) {
+    const safePayingPax = Math.max(1, payingPax);
+    const totalGroupHeadcount = safePayingPax + focPax;
+    
+    const fixedPerPaying = (globalFixedVehicles + sumDailyTransport + sumDailyGuide) / safePayingPax;
+    const baseVarPerHead = sumDailyMeals + sumDailyExcursions;
+    const varPerPaying = (baseVarPerHead * totalGroupHeadcount) / safePayingPax;
+    
+    const dblPerPaying = (hotelDblCost * totalGroupHeadcount) / safePayingPax;
+    const baseDblTotal = fixedPerPaying + varPerPaying + dblPerPaying;
+
+    let finalDbl = baseDblTotal;
+    if (markupType === 'persen') {
+        finalDbl += baseDblTotal * (markupVal / 100);
+    } else {
+        finalDbl += (markupVal * exRate);
+    }
+    return { dbl: finalDbl };
+}
+
+function executeFormulaSingleSupplement(totalMalam, hotelFullRoomRate, markupType, markupVal, exRate) {
+    const dblSharingRatePerNight = hotelFullRoomRate / 2;
+    const singleSupplementPerNight = hotelFullRoomRate - dblSharingRatePerNight;
+    let totalSupplement = singleSupplementPerNight * totalMalam;
+    
+    if (markupType === 'persen') {
+        totalSupplement += totalSupplement * (markupVal / 100);
+    } else {
+        totalSupplement += (markupVal * exRate);
+    }
+    return totalSupplement;
+}
+
+function checkIsNoHotelMode(mode) { return mode === 'no-hotel-matrix' || mode === 'no-hotel-nonmatrix'; }
+function checkIsMatrixMode(mode) { return mode === 'matrix' || mode === 'no-hotel-matrix'; }
+
+function updateTableLabels(mode, hotelViewElements, noHotelViewElements) {
+    if (mode === 'no-hotel-matrix') {
+        document.getElementById('table_title_label').innerText = "📄 Land Arrangement Matrix Tier Quotation (Without Hotel)";
+        hotelViewElements.forEach(el => el.classList.add('hidden'));
+        noHotelViewElements.forEach(el => el.classList.remove('hidden'));
+    } else if (mode === 'no-hotel-nonmatrix') {
+        document.getElementById('table_title_label').innerText = "📄 Land Arrangement Single Rate Quotation (Without Hotel)";
+        hotelViewElements.forEach(el => el.classList.add('hidden'));
+        noHotelViewElements.forEach(el => el.classList.remove('hidden'));
+    } else if (mode === 'matrix') {
+        document.getElementById('table_title_label').innerText = "📊 Rate(In USD)";
+        hotelViewElements.forEach(el => el.classList.remove('hidden'));
+        noHotelViewElements.forEach(el => el.classList.add('hidden'));
+    } else {
+        document.getElementById('table_title_label').innerText = "📄 Standard Single Quotation Rate (In USD)";
+        hotelViewElements.forEach(el => el.classList.remove('hidden'));
+        noHotelViewElements.forEach(el => el.classList.add('hidden'));
+    }
+}
+
+function createNoHotelRow(tierPaying, focPax, totalHead, resNoHotel) {
+    const tr = document.createElement('tr');
+    tr.className = "hover:bg-slate-50 transition-colors font-medium text-slate-700 text-xs";
+    tr.innerHTML = `
+        <td class="p-2 border border-slate-200 font-bold bg-slate-50 text-slate-900">${tierPaying} + ${focPax} FOC</td>
+        <td class="p-2 border border-slate-200 font-bold bg-cyan-50/40 text-cyan-950 text-center">${totalHead} Pax</td>
+        <td class="p-2 border border-slate-200 text-amber-900 font-bold text-center bg-amber-50/20 text-sm">${formatUSD(Math.ceil(resNoHotel.dbl / parseFloat(document.getElementById('exchange_rate').value || 3.6725)))}</td>
+    `;
+    return tr;
+}
+
+function createStandardHotelRow(tierPaying, focPax, totalHead, resA, ssA, resB, ssB, resC, ssC, exRate, showB, showC) {
+    const tr = document.createElement('tr');
+    tr.className = "hover:bg-slate-50 transition-colors font-medium text-slate-700 text-xs";
+    
+    let htmlContent = `
+        <td class="p-2 border border-slate-200 font-bold bg-slate-50 text-slate-900">${tierPaying} + ${focPax} FOC</td>
+        <td class="p-2 border border-slate-200 font-bold bg-cyan-50/40 text-cyan-950 text-center">${totalHead} Pax</td>
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">${formatUSD(Math.ceil(resA.dbl / exRate))}</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">${formatUSD(Math.ceil(ssA / exRate))}</td>
+    `;
+
+    // Hanya tampilkan jika showB = true (Hotel B Rate > 0)
+    if (showB) {
+        htmlContent += `
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">${formatUSD(Math.ceil(resB.dbl / exRate))}</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">${formatUSD(Math.ceil(ssB / exRate))}</td>
+        `;
+    }
+
+    // Hanya tampilkan jika showC = true (Hotel C Rate > 0)
+    if (showC) {
+        htmlContent += `
+        <td class="p-2 border border-slate-200 bg-yellow-50 text-yellow-900 font-bold">${formatUSD(Math.ceil(resC.dbl / exRate))}</td>
+        <td class="p-2 border border-slate-200 bg-slate-100 text-slate-800 font-semibold">${formatUSD(Math.ceil(ssC / exRate))}</td>
+        `;
+    }
+
+    tr.innerHTML = htmlContent;
+    return tr;
+}
+
+function kalkulasiPaket() {
+    const durasiHari = Math.max(1, parseInt(document.getElementById('durasi_hari').value) || 1);
+    const totalMalam = Math.max(0, durasiHari - 1); 
+    document.getElementById('lbl_hari').innerText = durasiHari;
+    document.getElementById('lbl_malam').innerText = totalMalam;
+
+    let exRate = parseFloat(document.getElementById('exchange_rate').value) || 3.6725;
+    if (exRate <= 0) exRate = 3.6725;
+
+    const modePresentation = document.querySelector('input[name="presentation_mode"]:checked').value;
+    const hotelFormContainer = document.getElementById('form_hotel_rates_container');
+    const confHotelSection = document.getElementById('conf_hotel_section');
+    
+    if (checkIsNoHotelMode(modePresentation)) {
+        hotelFormContainer.classList.add('opacity-40', 'pointer-events-none');
+        if (confHotelSection) confHotelSection.classList.add('hidden');
+    } else {
+        hotelFormContainer.classList.remove('opacity-40', 'pointer-events-none');
+        if (confHotelSection) confHotelSection.classList.remove('hidden');
+    }
+
+    const nameA = document.getElementById('hotel_a_name').value || "Hotel A";
+    const nameB = document.getElementById('hotel_b_name').value || "Hotel B";
+    const nameC = document.getElementById('hotel_c_name').value || "Hotel C";
+    document.getElementById('lbl_tbl_hotel_a').innerText = nameA;
+    document.getElementById('lbl_tbl_hotel_b').innerText = nameB;
+    document.getElementById('lbl_tbl_hotel_c').innerText = nameC;
+
+    let sumDailyTransport = 0, sumDailyGuide = 0, sumDailyMeals = 0, sumDailyExcursions = 0;
+    Object.keys(tourData).forEach(day => {
+        let i = parseInt(day);
+        sumDailyTransport += tourData[i].costs.transport || 0;
+        sumDailyGuide += tourData[i].costs.guide || 0;
+        sumDailyMeals += (tourData[i].costs.meal1 || 0) + (tourData[i].costs.meal2 || 0) + (tourData[i].costs.meal3 || 0);
+        if (tourData[i].costs.meals) sumDailyMeals += tourData[i].costs.meals; 
+        sumDailyExcursions += (tourData[i].costs.ticket1 || 0) + (tourData[i].costs.ticket2 || 0);
+        if (tourData[i].costs.excursion) sumDailyExcursions += tourData[i].costs.excursion; 
+    });
+
+    const visaFee = parseFloat(document.getElementById('fixed_visa').value) || 0;
+    const parkingFee = parseFloat(document.getElementById('fixed_parking').value) || 0;
+    const groupTicketFee = parseFloat(document.getElementById('group_ticket').value) || 0;
+    const groupAdditionalCost = parseFloat(document.getElementById('group_additional').value) || 0;
+
+    const globalFixedVehicles = parkingFee + groupTicketFee + groupAdditionalCost;
+
+    const rateA = parseFloat(document.getElementById('hotel_a_rate').value) || 0;
+    const rateB = parseFloat(document.getElementById('hotel_b_rate').value) || 0;
+    const rateC = parseFloat(document.getElementById('hotel_c_rate').value) || 0;
+
+    const dblCostA = (rateA * totalMalam) / 2;
+    const dblCostB = (rateB * totalMalam) / 2;
+    const dblCostC = (rateC * totalMalam) / 2;
+
+    const tipeMarkup = document.getElementById('tipe_markup').value;
+    const nilaiMarkup = parseFloat(document.getElementById('nilai_markup').value) || 0;
+
+    const basePax = parseInt(document.getElementById('num_pax').value) || 10;
+    const focPax = parseInt(document.getElementById('num_foc').value) || 0;
+
+    const matrixTableBody = document.getElementById('matrix_table_body');
+    matrixTableBody.innerHTML = '';
+
+    const hotelViewElements = document.querySelectorAll('.col-hotel-view');
+    const noHotelViewElements = document.querySelectorAll('.col-no-hotel-view');
+
+    updateTableLabels(modePresentation, hotelViewElements, noHotelViewElements);
+    // --- TAMBAHAN LOGIC HIDE/SHOW KOLOM HOTEL B & C ---
+    const showB = rateB > 0;
+    const showC = rateC > 0;
+    
+    if (!checkIsNoHotelMode(modePresentation)) {
+        document.getElementById('lbl_tbl_hotel_b').style.display = showB ? '' : 'none';
+        document.getElementById('lbl_tbl_hotel_c').style.display = showC ? '' : 'none';
+        
+        document.querySelectorAll('.sub-hotel-b').forEach(el => el.style.display = showB ? '' : 'none');
+        document.querySelectorAll('.sub-hotel-c').forEach(el => el.style.display = showC ? '' : 'none');
+    }
+    // --------------------------------------------------
+    
+    let tiers = [];
+    if (checkIsMatrixMode(modePresentation)) {
+        tiers = [basePax, basePax + 5, basePax + 10, basePax + 15, basePax + 20, basePax + 25, basePax + 30];
+    } else {
+        tiers = [basePax];
+    }
+
+    tiers.forEach(tierPaying => {
+        const totalHead = tierPaying + focPax;
+        const tierVisaGroup = visaFee * totalHead;
+        const tierLoadedMeals = sumDailyMeals + (tierVisaGroup / totalHead);
+        
+        if (checkIsNoHotelMode(modePresentation)) {
+            const resNoHotel = executeFormula(tierPaying, focPax, totalMalam, globalFixedVehicles, tierLoadedMeals, sumDailyExcursions, sumDailyTransport, sumDailyGuide, 0, tipeMarkup, nilaiMarkup, exRate);
+            const tr = createNoHotelRow(tierPaying, focPax, totalHead, resNoHotel);
+            matrixTableBody.appendChild(tr);
+        } else {
+            const resA = executeFormula(tierPaying, focPax, totalMalam, globalFixedVehicles, tierLoadedMeals, sumDailyExcursions, sumDailyTransport, sumDailyGuide, dblCostA, tipeMarkup, nilaiMarkup, exRate);
+            const resB = executeFormula(tierPaying, focPax, totalMalam, globalFixedVehicles, tierLoadedMeals, sumDailyExcursions, sumDailyTransport, sumDailyGuide, dblCostB, tipeMarkup, nilaiMarkup, exRate);
+            const resC = executeFormula(tierPaying, focPax, totalMalam, globalFixedVehicles, tierLoadedMeals, sumDailyExcursions, sumDailyTransport, sumDailyGuide, dblCostC, tipeMarkup, nilaiMarkup, exRate);
+            
+            const ssA = executeFormulaSingleSupplement(totalMalam, rateA, tipeMarkup, nilaiMarkup, exRate);
+            const ssB = executeFormulaSingleSupplement(totalMalam, rateB, tipeMarkup, nilaiMarkup, exRate);
+            const ssC = executeFormulaSingleSupplement(totalMalam, rateC, tipeMarkup, nilaiMarkup, exRate);
+
+            const tr = createStandardHotelRow(tierPaying, focPax, totalHead, resA, ssA, resB, ssB, resC, ssC, exRate, showB, showC);
+            matrixTableBody.appendChild(tr);
+        }
+    });
+}
+
+function formatUSD(angka) {
+    return 'USD ' + Number(angka).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+}
+
+async function saveCurrentFile() {
+    document.getElementById('company_selector').setAttribute('value', document.getElementById('company_selector').value);
+    document.getElementById('client_name').setAttribute('value', document.getElementById('client_name').value);
+    document.getElementById('durasi_hari').setAttribute('value', document.getElementById('durasi_hari').value);
+    document.getElementById('exchange_rate').setAttribute('value', document.getElementById('exchange_rate').value);
+    document.getElementById('num_pax').setAttribute('value', document.getElementById('num_pax').value);
+    document.getElementById('num_foc').setAttribute('value', document.getElementById('num_foc').value);
+    document.getElementById('start_date').setAttribute('value', document.getElementById('start_date').value);
+    
+    document.getElementById('hotel_a_name').setAttribute('value', document.getElementById('hotel_a_name').value);
+    document.getElementById('hotel_a_rate').setAttribute('value', document.getElementById('hotel_a_rate').value);
+    document.getElementById('hotel_b_name').setAttribute('value', document.getElementById('hotel_b_name').value);
+    document.getElementById('hotel_b_rate').setAttribute('value', document.getElementById('hotel_b_rate').value);
+    document.getElementById('hotel_c_name').setAttribute('value', document.getElementById('hotel_c_name').value);
+    document.getElementById('hotel_c_rate').setAttribute('value', document.getElementById('hotel_c_rate').value);
+
+    document.getElementById('fixed_visa').setAttribute('value', document.getElementById('fixed_visa').value);
+    document.getElementById('fixed_parking').setAttribute('value', document.getElementById('fixed_parking').value);
+    document.getElementById('group_ticket').setAttribute('value', document.getElementById('group_ticket').value);
+    document.getElementById('group_additional').setAttribute('value', document.getElementById('group_additional').value);
+    document.getElementById('nilai_markup').setAttribute('value', document.getElementById('nilai_markup').value);
+
+    document.getElementById('conf_weather_temp').setAttribute('value', document.getElementById('conf_weather_temp').value);
+    document.getElementById('conf_flight_arrival').setAttribute('value', document.getElementById('conf_flight_arrival').value);
+    document.getElementById('conf_flight_departure').setAttribute('value', document.getElementById('conf_flight_departure').value);
+    document.getElementById('conf_signboard').setAttribute('value', document.getElementById('conf_signboard').value);
+    document.getElementById('conf_guest_leader').setAttribute('value', document.getElementById('conf_guest_leader').value);
+    document.getElementById('conf_guide_driver').setAttribute('value', document.getElementById('conf_guide_driver').value);
+    
+    document.getElementById('h_a_in').setAttribute('value', document.getElementById('h_a_in').value);
+    document.getElementById('h_a_out').setAttribute('value', document.getElementById('h_a_out').value);
+    document.getElementById('h_a_room').setAttribute('value', document.getElementById('h_a_room').value);
+    document.getElementById('h_a_addr').setAttribute('value', document.getElementById('h_a_addr').value);
+
+    document.getElementById('h_b_in').setAttribute('value', document.getElementById('h_b_in').value);
+    document.getElementById('h_b_out').setAttribute('value', document.getElementById('h_b_out').value);
+    document.getElementById('h_b_room').setAttribute('value', document.getElementById('h_b_room').value);
+    document.getElementById('h_b_addr').setAttribute('value', document.getElementById('h_b_addr').value);
+
+    document.getElementById('h_c_in').setAttribute('value', document.getElementById('h_c_in').value);
+    document.getElementById('h_c_out').setAttribute('value', document.getElementById('h_c_out').value);
+    document.getElementById('h_c_room').setAttribute('value', document.getElementById('h_c_room').value);
+    document.getElementById('h_c_addr').setAttribute('value', document.getElementById('h_c_addr').value);
+
+    const selectMarkup = document.getElementById('tipe_markup');
+    for (let opt of selectMarkup.options) {
+        if (opt.value === selectMarkup.value) opt.setAttribute('selected', 'selected');
+        else opt.removeAttribute('selected');
+    }
+
+    document.getElementById('txt_inclusions').innerHTML = document.getElementById('txt_inclusions').value;
+    document.getElementById('txt_exclusions').innerHTML = document.getElementById('txt_exclusions').value;
+    document.getElementById('txt_terms').innerHTML = document.getElementById('txt_terms').value;
+
+    const regexTourData = /let tourData = \{[\s\S]*?\};/;
+    const updatedTourDataStr = `let tourData = ${JSON.stringify(tourData, null, 4)};`;
+    
+    let fullHTMLContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+    fullHTMLContent = fullHTMLContent.replace(regexTourData, updatedTourDataStr);
+
+    try {
+        if (!fileHandle) {
+            const clientName = document.getElementById('client_name').value.trim().replace(/[^a-zA-Z0-9]/g, "_") || "Client";
+            const today = new Date().toISOString().slice(0, 10);
+            const defaultFilename = `Costing_Sheet_${clientName}_${today}.html`;
+
+            const options = {
+                suggestedName: defaultFilename,
+                types: [{
+                    description: 'HTML Files',
+                    accept: { 'text/html': ['.html'] },
+                }],
+            };
+            fileHandle = await window.showSaveFilePicker(options);
+        }
+
+        const writable = await fileHandle.createWritable();
+        await writable.write(fullHTMLContent);
+        await writable.close();
+        alert("💾 Perubahan berhasil disimpan langsung ke dalam file!");
+    } catch (err) {
+        if (err.name !== 'AbortError') {
+            console.warn("FileSystem API tidak didukung, beralih ke metode unduh otomatis.");
+            const clientName = document.getElementById('client_name').value.trim().replace(/[^a-zA-Z0-9]/g, "_") || "Client";
+            const today = new Date().toISOString().slice(0, 10);
+            const filename = `Costing_Sheet_${clientName}_${today}.html`;
+
+            const blob = new Blob([fullHTMLContent], { type: 'text/html' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    }
+}
+</script>
+</body></html>
